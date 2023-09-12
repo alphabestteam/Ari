@@ -1,0 +1,42 @@
+1.1
+Exceptions happens when you hava a incorrect result for exemple if you try to divide some number by 0, 
+           the Exceptions will print us a massage and the last line of the massege it tell us what kind of error it was.
+               Python alow us to raise a Exceptions in our code if some condition occurs.
+                      to raise Exceptions in your code use you can use it like this:
+                                                                                    x = 5
+                                                                                    if x > 3
+                                                                                    raise Exception('x should not exceed 3')
+and also we have the try and exception, the try keyword check a block of code to see if there any errors. 
+the exception keyword let you handle the errors.
+and also we have the else keyword who  let you run the code when no error found. 
+and last we got the finally keyword who let yu run the code but with no conaction to the try and exception block.
+
+
+
+1.2
+in pdf3.quest1.2
+
+
+
+2.1
+list Comprehension alow us to create a new list based on a existing list.
+     for exemple if i had a list with names and i want to create another list with all the names that contain the letter "a", instead of using for loop we can use list Comprehension that way:
+                                                                                                                                                                                             names = ["Ari", "David", "Hen", "Daniel"]
+                                                                                                                                                                                             newlist = [x for x in names if "a" in x]
+
+
+2.2 
+we don't have to use them, instead of it we can use for loop on the old list. 
+
+
+
+2.3
+in pdf3.quest2.3
+
+
+
+2.4
+in pdf3.quest2.4
+
+
+
