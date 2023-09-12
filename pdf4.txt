@@ -1,0 +1,19 @@
+:File Handling
+1.
+because file handling alow to write, read, delete and other method that File Handling let us use that not exist in others.
+
+2.
+the open() commend open for us file that we give his path. 
+    after the open() commend we can write the read method, read() let us the permission to read and only read from the file (we can read only line with readline(). or read only few letters with read(5)).
+          the write() method let us the permission to write text over the exist text. if it don't find the request file he create one.
+              the a commend is like write() but it add text in the end of the text and not write over it. and like write() it also create file if he don't find it.
+                  the b commend is stand for a binary file (t stand for text file).
+
+JSON:
+1.
+Json (stand for JavaScript Object Notation) is format of text that contain and transfer date between computers. its written in Java Script. 
+
+2.
+to use with json we need to use the import json model. 
+   the main function that we will use with them is load() - to convert a json file to a dict. and dumps() - to convert py file to json.
+   
