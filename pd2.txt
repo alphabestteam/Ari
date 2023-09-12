@@ -1,0 +1,77 @@
+2.1
+if you want to use some module in your current program file you need to import the require module to your file -
+    by writing import the interpreter imports the module that you need for this program. 
+
+
+
+2.2
+if we want to go beck we write ../ 
+and i we want to go inside the folder we write /
+
+
+
+2.3
+sometimes when we import  another file we don't want the all file will be run because not all of it is rlevant so the code we don't want to run we put inside the main and it don't run
+
+
+
+2.4 
+the class it something that create by the user and from it we create object. with classes we can union data functionality together.when you create a new class it create a new object.
+
+
+
+2.5
+we want to use classes if we want to create object of this kind and use the attribute that define in th class.
+the advantage: Organize: organize the code by divide it to small pieces.
+               Abstraction: now we can create moire then one object.
+               Inheritance: we can create a new class based on old existing class.
+
+
+
+2.6
+class attribute are variables that moving by Inheritance to every object on the class. the value of them stay the same for all the attribute class.
+
+
+
+2.7
+object is a instance of class meaning - if we create class of student we can create student1 who will be instance of student.
+
+
+
+2.8
+Constructor: his task is to to initialize the data members of the class when the object of this class is created
+Destructor: Destructor will be called when object is destroyed and not be in use anymore (not very needed because Python has a garbage collector)
+
+
+
+2.9
+the self parameter is reference to a current instance of the class and he can give an access to variable that belong to the class.
+
+
+
+2.10
+Inheritance alow us a class that inherits all the properties from the old class. the class how inherits from is the parent class and the one how inherits is the child class.
+
+
+
+2.11
+the name Polymorphism means something with many forms and in program it means a function with same name that used for different types.
+
+
+
+2.12
+method how don't need object to use it, class its enough. 
+      we want to use it if we want to change the all object by the class.\
+          to define a static method: @staticmethod.
+
+
+
+2.14
+enum is a group of names of a uniq values. they created by using classes. it can be helpful to create a more reading code by using meaningful names.
+
+
+
+
+2.15
+1.enum its easy to maintenance because enums centralize the names value.
+2. enums can promise a high level of safety because they alow only a valid values.
