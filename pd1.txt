@@ -1,0 +1,86 @@
+1.1
+function is a block of code that do not do anything unless we called har by har name. we can pass to har a data and we can ask har to return a data.
+        we use function if we got a bunch of stuff that we want to repeat, now we don't need to rewrite the code every time, instead we just call to the function and use har.
+           
+
+
+1.2 
+sometimes we want the function will calculate us something and return the result that why we need a return. for example:
+                                                                                                                        def my_function(x)
+                                                                                                                           return x * 2
+                                                                                                                        
+                                                                                                                        my_function(5)
+                                                                                                                        the function will return 10.
+
+1.3
+when we pass by value if we do some changes on the variable it not change the original variable at all outside the function.
+     but when we pass by reference we pass the original variable so of we do some changes on the variable in the function we change him also outside the function.
+
+
+
+
+1.4
+scope tell us where i can call to a variable. i can't call to any variable from any place in the code' there are a 4 kinds of variables: local, global, enclosing and built-in.
+      local: if we define a variable inside a function this variable is live only inside as long as the function is running and can not be reached outside the function.
+      enclosing: if we have function inside a function and we got variable in tow of them, the first function variable can't reached the second variable but the second variable can access to the first variable.
+      global: if a variable defined outside of any function he become a global and we can access him from anywhere. but after the program stop running he delete.
+      built-in: this variable is built-un in python and we can reached him from anywhere and even after py code is stop running he still exists.
+and in python because we use Indentation to know where the variable is belong it's important to know if it;s global or local...
+
+
+
+1.5
+def my_function(number1 =0 ,  number2 = 0):
+    return number1 + number2
+print(my_function(5, 5))
+
+
+
+1.6
+def my_function(name):
+     print(f"Hello {name}! Great to see you")
+print(my_function("Ari"))
+
+
+
+1.7
+import math
+
+def calculator(a,b,c):
+
+# math that we will need in the formula
+    square_b = b ** 2
+    twice_a =  2 * a
+    a_mult_c = a * c
+
+
+# the formula
+    x1 = (-b + math.sqrt(square_b -(4* a_mult_c)))/ twice_a
+    x2 = (-b - math.sqrt(square_b -(4* a_mult_c))) / twice_a
+    print(f"X1 = {x1}")
+    print(f"X2 = {x2}")
+    
+print(calculator(2,6,3))
+
+
+
+1.8
+import random
+def random_def(num1, num2):
+
+    random_num = random.randint(num1, num2) # to int
+    random_num_float = random.uniform(num1, num2) #to float
+    return random_num, random_num_float
+print(random_def(1,10))
+
+
+
+1.9
+in shortly - recursion function is a function how call it self.
+   we want to use recursion when we want to use the result the function give me earlier.
+      of course we can write code without using recursion.
+         recursion is slow because at every call it require a new stuck frame.  
+
+
+
+                                                                                                                            
