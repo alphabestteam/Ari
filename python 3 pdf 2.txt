@@ -1,0 +1,48 @@
+1.
+because sometimes we don't know how many parameters we need so python gives us an unlimited parameters.
+    example to this function - sum(sum all the arguments you give to her) can get unlimited parameters.
+
+2.
+*args means that we pass to a function number of arguments with no keyword.
+    if we have *args in our function's parameter it's alow us to give any number of arguments.
+        if the args is in a print() it will give us a tuple of all the args. (meaning the *args keep the args in tuple)
+
+3.
+**kwargs means that we pass to a function number of keyword arguments.
+    if we have **kwargs in our function's parameter it's alow us to give any number of arguments.  
+        if the kwargs is in a print() it will give us a dict of all the args. (meaning the *args keep the args in dict)
+
+4.
+the *args pass arguments with non keyword vs **kwargs that pass arguments with keyword.
+    and the main difference is the arg use tuple and kwargs use dict.
+
+5.
+packing:
+if we don't know how many arguments the function can receive, we packing all the arguments to a one tuple.
+
+unpacking:
+if we have a function that receive number of arguments and also we got a list with the same size as the number of the arguments that tha function receive,
+    if we call to the function and pass har the list it will not work, so unpacking is unpack the list so each element pass as a parameter.
+
+6.
+packing: 
+if we don't know how many arguments the function can receive, we packing all the arguments to a one tuple.
+    like this:
+        def mySum(*args):
+            return sum(args)
+            
+        print(mySum(1, 2, 3, 4, 5))
+        print(mySum(10, 20))
+
+unpacking:
+if we have function that receive a 4 arguments and list size 4 we need to unpacking the list to parameters and then we can call to the function.
+    like this: 
+        def function(a, b, c, d):
+            print(a, b, c, d)
+
+        my_list = [1, 2, 3, 4]
+        fun(*my_list)
+
+
+
+
