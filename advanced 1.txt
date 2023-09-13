@@ -1,0 +1,22 @@
+1.
+magic functions are also known as a Dunder method - they are method that have a two underscore before and after the name of the mothod.
+for example:
+            the __add__ method - (can add objects)  
+            the __sub__ method - (can sub objects)
+            the__mul__ method  - (can multiply object)
+            the__pow__ method - (can raises a object squared)
+
+2.
+the object will be printed in way that a human can be read.
+
+
+3.
+the compare that will be checked is if the value of the objects thar we want to compare are the same. 
+
+4. 
+operator overloading means that we can extended meaning even beyond the predefined.
+         in example if we want to add tow objects the compiler throw an error because he don't know how to add two objects
+            so we need to define a method and this process called operator overloading.
+               and for cases like this Python gives us the magic methods like the __add__ method that know immediately we write + to add two object.  
+
+5.
