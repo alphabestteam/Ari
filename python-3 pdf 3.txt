@@ -1,0 +1,69 @@
+Decorators:
+a.
+decorators alow us to change the behaviour of class or function. 
+    the decorators can "cover" the function and then extend har behaviour.
+        we need them if we want to extend behaviour of function but not change har to forever.
+
+b.
+decorators are change the function by taken the function as an argument into another function and after that we call to the cover function.
+
+c. 
+in python function is also an object (in Python everything is object), and every object have is own id,
+     so the pointer function gives us access to the own id of the function.
+
+
+d.
+because in decorator we want the function hwo was covered to get unlimited numbers of arguments - that why we need the *args.
+    and because we also want the function will can get any number of keyword argument - that why we need the **kwargs.
+
+e.
+we already use decorator in getters in oop program.
+
+g.
+class decorator can add class into a function without changing the source of the code. to define this decorator we need to implement the __call__() method.
+
+
+Iterators:
+a.
+is an object that alow you to loop through the data the object contain.
+     and its work in function called __iter__ - to give us the object we are on it.
+        and __next__ function to give the next item we on it.
+
+b. 
+kinds of Iterators: dictionary, list, tuple. each of them can be looped through the items it contains.
+
+c.
+delete the object and the variable from the memory.
+
+d.
+to make our object to be iterators we need to implement the function __iter__ if we want the current object and __next__ function if we want the next object.
+
+
+Generators:
+a.
+Generators are function that don't use the return that we used in function that return us a single value,
+    they use in yield that return number of variables in a different places in the function.
+        
+b.
+it useful because it save us memory and also gives us the option to return (to yield...) num of variables.
+
+c.
+because this how we can run on the variables values using the function __next__ or with a regular loop.
+    it's useful if we want to run a different pieces of the function in a different places in our code.
+        for example if the function hold a reference to a variable that we want the function do something on it only after a few actions. 
+
+d.
+yield in other words is like "wait" - meaning when i write the word yield the function wait and yield return me a value and then it come back to the function.
+    and its different from return because after we write return it don't come back to the function and because of this return cannot return a few variable vs yield that can do it.
+
+
+
+
+
+
+
+
+
+
+
+
