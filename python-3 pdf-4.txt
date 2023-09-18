@@ -1,0 +1,61 @@
+Threading + Requests:
+a.
+usually when we run the program the program will be running line after line, two lines can be run in the same time. 
+    sometimes we want the program will running a few process in the same time, to do this will be needed with Treads.
+        Tread is an object that alow us to run a few actions in the same time with other Tread.
+
+b.
+to use threads we need to import threading.
+
+c.
+request library is a module that take care of sanding HTTP requests with a simple API like get and post. 
+    we prefer to ust this library sometimes and not the socket because socket does'nt have a official protocol to HTTP vs request library that have a protocol.
+
+e.
+thread lock is giving us synchronization so we get exclusive access to a source that shared with few threads. 
+    we want to use it to prevent race condition - if tow threads or more want access to the same source.
+
+Sockets:
+a.
+sometimes we want to connect between computers in our network, socket is a way to communicating 2 components in a network.
+    we are not always want to use socket in directly, just for a simple things like sending data without a official protocol.
+        and something like HTTP request we use in modules that just do it.
+
+b.
+Client Server Configuration its when the client and the server want to have conversation
+    to start a conversation we need to do a few steps:
+        server: create a socket, Bind to the address and to the port, listen to start listening
+            after this steps the client create socket and then connect to another socket the can be listening in a address and port. 
+                the server accept the connection.
+                after this the client create sendall to sand the data, and the server create  Recv to get the data, and then do a sendall to sand data beck (if it needed) and then the client do a Recv to get the data.
+            
+c.
+the two parameters are: 
+    Address Family:
+        is a family of address that the socket need to communicate. (AF_INET – IPv4, AF_INET – IPv6, AF_UNIX )
+    kind of connection:
+        it will be contain the kind of the connection it could be: SOCK_STREAM - to a loyal connection with connect and order keeper (like TCP).
+                                                                    SOCK_DGRAM - less loyal with no connection but faster (like UDP) 
+                                    
+d. 
+before the threads the running time was:  1.6176347732543945
+after the threads the running time is about: 1.2320356369018555
+
+
+
+Virtual Environments:
+a.
+Virtual Environments are solution for the problem that sometimes we want to run to 2 projects in are machine, and each of the project support different version,
+    or if we got projects with dependence with allot of outsiders modules, and it be complicated to switch between position to position cause we need to download all the modules. 
+        the Virtual Environment solved this by having a folder that contain the data, the libraries and the version that we need to run this project.
+
+b.
+by having a folder that contain the data, the libraries and the version that we need to run this project. included modules that Required ti the program and the coreccet python version.
+
+
+c.
+to create a visual environments we need to installed a venv library and then to create the visual environment we will run a commend un the cmd inside the project folder.
+    to turn the visual environment on  (we need to turn it on cause if it will be of the changes that we will do it will be done on our machine).
+
+d.
+No, because we need first to install all the modules and libraries we used on the program.
