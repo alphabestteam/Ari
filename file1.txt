@@ -1,0 +1,35 @@
+pdf 1:
+
+Question 1:
+there is two types of db - SQl and no-sql:
+    SQL works with queries and tables with rows and columns. he require that your input will be exactly in the syntax he wants and if it's not it will be error.
+        no-sql is db that works with collections with documents and fields. he don't require a specific syntax. we prefer this db witt large data. 
+            he got two types of scaling - Horizontal  with two types: Replica stet: copy all the data too different servers and sharding: divide the data too small different servers.
+                and Vertical scaling: that add the new data to the exists server.
+                    open source. got robust. fast. scalable.
+
+Question 2: 
+Advantages:
+          high scalability.
+          high speed.
+          can access to the original code.
+Disadvantages:
+            open source.
+            narrow focus.
+            not support complex queries.
+
+Question 3:
+ the firs layer - database - made of multiple collections.
+    the second - collections - contains documents.
+        the third - is storage in binary JSON. have key_words like primary keys in SQL. 
+            the fourth - fields - create the document by using the key and value.
+
+Question 4:
+sometimes our database contain two documents with the same name so to get one of them we can use by his id.
+    if we don't give id tha mongo will give one.
+
+
+            
+
+
+
