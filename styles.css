@@ -1,0 +1,427 @@
+header { 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+a {
+    font-size: 20px;
+    letter-spacing: 6px;
+    padding: 0 15px;
+    padding-bottom: 25px;
+    display: block;
+    color: #181818;
+}
+
+#page-border {
+    background: #f5f5f5;
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+img { 
+    max-width: 100%;
+    mix-blend-mode: multiply;
+}
+
+#nav p {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    font-size: 20px;
+    word-spacing: 1px;
+    line-height: 32px;
+    margin: 0;
+    text-align: center;
+} 
+
+#nav p.logo {
+    margin-bottom: 15px;
+    width: 120px;
+}
+
+hr.center.grid-2 {
+    width: 120px;
+}
+
+#nav a {
+    font-size: 20px;
+    letter-spacing: 6px;
+    padding: 0 15px;
+    padding-bottom: 25px;
+    display: block;
+    color: #181818;
+}
+
+#nav a:hover {
+    color: #20b2aa;
+}
+
+#tagline {
+    font-size: 80px;
+    word-spacing: 1px;
+    line-height: 70px;
+    margin-top: 0.3em;
+    text-transform: none;
+    letter-spacing: -3px;
+    color: black;
+    text-align: center;
+}
+
+#header h2 {
+    margin-top: 1.5em;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 32px;
+    color: #6b6b6b;
+    width: 760px;
+    margin-left: 220px;
+}
+
+#nav {
+    text-align: center;
+}
+
+#header {
+    margin-top: 0;
+    margin-bottom: -0px;
+    padding: 0;  
+}
+
+.grid-14.center {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-14 { 
+    position: relative;
+    max-width: 100%;
+}
+
+.grid-2.center {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+ .grid-2 {
+    float: left
+}
+
+.section {
+    margin-top: 115px;
+}
+
+.fonts-display {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+
+main { 
+    display: block;
+}
+
+.img {
+    clip-path: polygon(10% 25%, 50% 2%, 90% 25%, 90% 75%, 50% 98%, 10% 75%); 
+}
+
+.imgline1 {
+   display: flex;
+     
+}
+
+.imgline2 {
+    display: flex;
+    margin-left: 60px;
+    margin-right: 60px;
+ }
+
+ .imgline3 {
+    display: flex;
+ }
+
+.list-inline-block{
+    list-style: none;
+ }
+
+.section h2 {
+    margin-bottom: 40px;
+    font: inherit;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #181818;
+    text-align: center;
+}
+
+.chart .h1 {
+    margin: 0;
+    height: 20px;
+    width: 50px;
+    line-height: 0px;
+    font-size: 32px;
+    margin-left: 20%;
+    color: black; 
+}
+
+.chart.grid-2 {
+    width: 120px;
+    margin-right: 24px;
+    margin-left: 64px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.chart p {
+    color: gray;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.section h3 {
+    margin-top: 1.5em;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 32px;
+    color: #6b6b6b;
+    width: 1080px;
+    text-align: center;
+}
+
+.name {
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-left: 423px;
+    color: #6b6b6b
+}
+.circles {
+    list-style: none;
+    display: flex;
+    margin-left: 410px;
+    margin-bottom: 100px;
+}
+
+.main-circle {
+    margin: 3px;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border: red solid 2px;
+    border-radius: 50%;
+}
+.circle {
+    margin: 3px;
+    height: 35px;
+    width: 35px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.circle :hover {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #20b2aa;
+}
+
+hr {
+    width: 300px;
+    height: 35px;    
+}
+
+.hr2 {
+    margin-left: 80px;
+}
+
+/* .hr3 { 
+    margin-left: 750px;
+}  */
+
+.about {
+    display: flex;
+    text-align: center;
+}
+
+.about li {
+    list-style: none;
+}
+
+.h3-about {
+    margin-bottom: 50px;
+    color: #6b6b6b;
+    margin-top: 30px;
+}
+
+.p-about2 {
+    font-size: 15px;
+    letter-spacing: normal;
+    line-height: 25px;
+    color: gray;
+    text-align: center;
+}
+
+.button-2 {
+    background-color: lightgray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+  }
+
+.button-4 {
+  background-color: lightgray;
+  border-radius: 6px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+}
+
+.button:hover {
+    border-radius: 50%;
+    background-color: pink;
+}
+
+.about1:hover {
+    .button-2 {
+        background-color: #20b2aa;
+    }
+    .button-1{
+        border-radius: 50%;
+        background-color: pink;
+    }
+}
+
+.about2:hover {
+    .button-4 {
+        background-color: #20b2aa;
+    }
+    .button-3{
+        border-radius: 50%;
+        background: pink;
+        }
+}
+ 
+
+.hr-footer {
+    width: 70%;
+    margin-left: 180px;
+    height: 2px;
+    background: black;
+}
+.footer {
+    height: 400px;
+}
+
+.footer p {
+    margin-top: 35px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    margin-left: 300px;
+    color: gray;
+    margin-bottom: 30px;
+}
+.footer-imges {
+    display: flex;
+    margin-left: 230px;
+    width: 50%;
+}
+.footer-img1 {
+    opacity: 0.5;
+}
+.footer-img2 {
+    opacity: 0.5;
+}
+
+.footer-img1:hover {
+    opacity: 1;
+}
+.footer-img2:hover {
+    opacity: 1;
+}
+
+.footer a {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+    color: gray;
+}
+
+.footer .copyright1 {
+    color: gray;
+    font-size: 15px;
+    width: 760px;
+    margin-right: 190px;
+    margin-bottom: 0;
+}
+
+.footer .copyright2 {
+    margin: 0;
+    margin-left: 250px;
+    margin-top: 0;
+    color: gray;
+    font-size: 15px;
+    width: 760px;
+}
+
+.footer .built {
+    display: inline;
+    letter-spacing: 3px;
+    margin: 0;
+    font-size: 15px;
+    width: 770px;
+}
+
+.footer .built:hover {
+    color: #20b2aa;
+}
+
+.footer .read {
+    letter-spacing: 3px;
+    border: 0;
+    padding: 0;
+    border: 0;
+}
+
+.footer .read:hover {
+    color: #20b2aa;
+}
+
+
+
+
+
+
+
+
