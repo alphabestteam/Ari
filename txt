@@ -1,0 +1,425 @@
+
+
+
+
+
+
+
+
+/* hr.center.grid-2 {
+    width: 120px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+     vertical-align: baseline; 
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+
+.list-mobile-spacing>li {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.list-small>li {
+    font-size: 12px;
+    word-spacing: 1px;
+    line-height: 14px;
+    vertical-align: top;
+}
+
+.list-float-none>li {
+    float: none;
+}
+
+li { 
+    padding: 0;
+    border: 0;
+    font: inherit;  
+    text-align: -webkit-match-parent;
+}
+
+.chart svg {
+    position: absolute;
+}
+
+
+
+.fonts-display-cnd {
+    font-family: neuzeitgroextblack,sans-serif;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.h1 {
+    font-size: 34px;
+    word-spacing: 1px;
+    line-height: 40px;
+}
+
+p {
+    margin-top: 1em;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main id="conent">
+
+<section class="section interactive" data-interactive>
+                    <div class="list-hex-grid clearfix" style="padding-top: 0.666664px;">
+                        <div class="hex grid-3 secondery" style="opacity: 1;">
+                            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU"
+                                style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU);">
+                               
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3 tertiary " style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3 secondery " style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+
+                        <div class="hex grid-3 secondery" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+
+                        <div class="hex grid-3 secondery" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+
+                        <br class="mq-mid mq-small">
+                        <div class="hex grid-3 secondery" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3 tertiary" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+
+                        <br class="mq-wide">
+                        <div class="hex grid-3 tertiary" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3 secondery" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        <div class="hex grid-3 invet" style="opacity: 1;">
+                            <a
+                                href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdKoMDimTTPg2MvCKsuy993xGt8GFOwJADmA&usqp=CAU">
+                                <div class="hex-1"></div>
+                                <div class="hex-2"></div>
+                            </a>
+                        </div>
+                        </main>
+
+
+
+
+                        <!-- <svg height="120" version="1.1" width="120" xmlns="http://www.w3.org/2000/svg"
+                            style="overflow: hidden; position: relative; left: -0.208344px; top: -0.197937px;">
+                            <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with
+                                Raphaël 2.1.0</desc>
+                            <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                            <circle cx="60" cy="60" r="59" fill="none" stroke="#e4e4e4" stroke-width="2"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle>
+                            <path fill="none" stroke="#16a6b6"
+                                d="M60,1A59,59,0,0,1,94.67932988525592,107.73200266812191" stroke-width="2"
+                                style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                        </svg> -->
+
+                        /* * {
+    margin: 0;
+    padding: 0
+}
+head {
+    display: none;
+} */
+
+
+/* 
+body {
+    font-size: 18px;
+    word-spacing: 1px;
+    line-height: 26px;
+    font-family: freightsans_regular, helvetica neue, sans-serif;
+    font-weight: 300;
+    text-transform: none;
+    color: #6b6b6b;
+    text-align: center;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+} */
+
+
+/* #wrap {
+    padding: 20px 0;
+} */
+
+/* #header {
+     margin-top: 0;
+     margin-bottom: -50px;
+     padding: 0;
+} */
+
+/* h1 {
+    text-align: center;
+    font-size: 70px;
+    color: black; 
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-weight: 300;
+} */
+
+
+/* .grind-10.center {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* .grind-10 {
+    position: relative;
+    max-width: 100%;
+} */
+
+
+/* p {
+    margin: 0;
+    padding: 0;
+    border: 40;
+    font: inherit;
+    font-size: 100%;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+} */
+
+
+/* hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    border: none;
+    height: 1px;
+    background-color: #c5c5c5;
+} */
+
+/* div {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font: inherit;
+     vertical-align: baseline;
+} */
+
+/* nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+} */
+
+
+/* .logo {
+    margin-top: -25px;
+    text-indent: -999em;
+} */
+
+/* .logo a img {
+    display: block;
+    height: auto;
+} */
+
+/* a img {
+    border: none;
+} */
+
+
+/* .container {
+    position: relative;
+    margin: 0 auto;
+} */
+
+<hr class="horizontal-line hr1" />
+    <hr class="horizontal-line hr2" />
+    <hr class="horizontal-line  hr3" />
+            <div class="about">
+                <div class="project">
+                    <a href="" title="Proposal planner">
+                        <i>
+                            <svg 0 0 100 100 style="color: red;">
+                                <path d="M15 .5A14.5 14.5 0 1 1 .5 15 14.516 14.516 0 0 1 15 .5m0-.5a15 15 0 1 0 15 15A15 15 0 0 0 15 0z" fill="currentColor"></path>
+                                <path d="M10.527 19.604v2.122h-1.55l-.882-.208-.618-.619a7.885 7.885 0 0 0-.157-.886 2.94 2.94 0 0 1 .111-.752l.483-.634.781-.254h.813l.49.436z" fill="currentColor" opacity=".2"></path>
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+                                    <path d="M10.679 10.03h11.584a.459.459 0 0 1 .458.459V20.98a.618.618 0 0 1-.618.618H8.918M7.299 19.32v-8.831"></path>
+                                    <path d="M8.918 21.599a1.619 1.619 0 0 1-1.619-1.62v-9.896a1.619 1.619 0 0 1 1.62-1.619 1.619 1.619 0 0 1 1.618 1.62v9.896m.021-.095a1.64 1.64 0 0 0-3.28 0m3.28-8.299h.15"></path>
+                                    <path stroke-dasharray="0.2747 1.8313" d="M12.539 11.586h7.509"></path>
+                                    <path d="M20.963 11.586h.15v.15"></path>
+                                    <path stroke-dasharray="0.16221 1.0814" d="M21.113 12.818v.702"></path>
+                                    <path d="M21.113 14.061v.15h-.15"></path>
+                                    <path stroke-dasharray="0.27553 1.83686" d="M19.126 14.211h-7.531"></path>
+                                    <path d="M10.677 14.211h-.15m.031 1.386h1.89v2.649h-1.89m7.712-2.649h2.844v2.649H18.27zm-1.489 2.499v.15h-.15"></path>
+                                    <path stroke-dasharray="0.17747 1.18314" d="M15.447 18.246h-.769"></path>
+                                    <path d="M14.087 18.246h-.15v-.15"></path>
+                                    <path stroke-dasharray="0.16389 1.09263" d="M13.937 17.003v-.71"></path>
+                                    <path d="M13.937 15.747v-.15h.15"></path>
+                                    <path stroke-dasharray="0.17747 1.18314" d="M15.27 15.597h.769"></path>
+                                    <path d="M16.631 15.597h.15v.15"></path>
+                                    <path stroke-dasharray="0.16389 1.09263" d="M16.781 16.839v.71"></path>
+                                    <path d="M18.27 19.206h2.843m-2.843.96h.787m.885 0h.515m-6.52-.96h2.844m-2.844.96h.788m.884 0h.516m-5.598-.96h1.921m-1.172.96h.516m7.31-2.696l1.146-1.067m-1.107-.04l1.068 1.146m-9.682-.039l1.146-1.067m-1.106-.04l1.067 1.146"></path>
+                                </g>
+                            </svg>
+                        </i>
+                        <h3 class="h3-about">Project planner</h3>
+                        <p class="p-about1">Interested in working with us? Launch our proposal planner to get started.</p>
+                        <p class="button-3">Launch it</p>
+                    </a>
+            </div>
+
+            <div class="connect">
+                <a href="" title="Proposal planner">
+                    <i>
+                        <svg viewBox="0 0 100 100" style="color: red;">
+                            <path d="M15 .5A14.5 14.5 0 1 1 .5 15 14.516 14.516 0 0 1 15 .5m0-.5a15 15 0 1 0 15 15A15 15 0 0 0 15 0z" fill="currentColor"></path>
+                            <path d="M10.527 19.604v2.122h-1.55l-.882-.208-.618-.619a7.885 7.885 0 0 0-.157-.886 2.94 2.94 0 0 1 .111-.752l.483-.634.781-.254h.813l.49.436z" fill="currentColor" opacity=".2"></path>
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+                                <path d="M10.679 10.03h11.584a.459.459 0 0 1 .458.459V20.98a.618.618 0 0 1-.618.618H8.918M7.299 19.32v-8.831"></path>
+                                <path d="M8.918 21.599a1.619 1.619 0 0 1-1.619-1.62v-9.896a1.619 1.619 0 0 1 1.62-1.619 1.619 1.619 0 0 1 1.618 1.62v9.896m.021-.095a1.64 1.64 0 0 0-3.28 0m3.28-8.299h.15"></path>
+                                <path stroke-dasharray="0.2747 1.8313" d="M12.539 11.586h7.509"></path>
+                                <path d="M20.963 11.586h.15v.15"></path>
+                                <path stroke-dasharray="0.16221 1.0814" d="M21.113 12.818v.702"></path>
+                                <path d="M21.113 14.061v.15h-.15"></path>
+                                <path stroke-dasharray="0.27553 1.83686" d="M19.126 14.211h-7.531"></path>
+                                <path d="M10.677 14.211h-.15m.031 1.386h1.89v2.649h-1.89m7.712-2.649h2.844v2.649H18.27zm-1.489 2.499v.15h-.15"></path>
+                                <path stroke-dasharray="0.17747 1.18314" d="M15.447 18.246h-.769"></path>
+                                <path d="M14.087 18.246h-.15v-.15"></path>
+                                <path stroke-dasharray="0.16389 1.09263" d="M13.937 17.003v-.71"></path>
+                                <path d="M13.937 15.747v-.15h.15"></path>
+                                <path stroke-dasharray="0.17747 1.18314" d="M15.27 15.597h.769"></path>
+                                <path d="M16.631 15.597h.15v.15"></path>
+                                <path stroke-dasharray="0.16389 1.09263" d="M16.781 16.839v.71"></path>
+                                <path d="M18.27 19.206h2.843m-2.843.96h.787m.885 0h.515m-6.52-.96h2.844m-2.844.96h.788m.884 0h.516m-5.598-.96h1.921m-1.172.96h.516m7.31-2.696l1.146-1.067m-1.107-.04l1.068 1.146m-9.682-.039l1.146-1.067m-1.106-.04l1.067 1.146"></path>
+                            </g>
+                        </svg>
+                    </i>
+                    <h3 class="h3-about">connect</h3>
+                    <p> hello@builtbybuffalo.com </p>
+                </a>
+        </div>
+
+        <div class="calendy">
+            <a href="" title="Proposal planner">
+                <i>
+                    <svg viewBox="0 0 100 100" style="color: red;">
+                        <path d="M15 .5A14.5 14.5 0 1 1 .5 15 14.516 14.516 0 0 1 15 .5m0-.5a15 15 0 1 0 15 15A15 15 0 0 0 15 0z" fill="currentColor"></path>
+                        <path d="M10.527 19.604v2.122h-1.55l-.882-.208-.618-.619a7.885 7.885 0 0 0-.157-.886 2.94 2.94 0 0 1 .111-.752l.483-.634.781-.254h.813l.49.436z" fill="currentColor" opacity=".2"></path>
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4">
+                            <path d="M10.679 10.03h11.584a.459.459 0 0 1 .458.459V20.98a.618.618 0 0 1-.618.618H8.918M7.299 19.32v-8.831"></path>
+                            <path d="M8.918 21.599a1.619 1.619 0 0 1-1.619-1.62v-9.896a1.619 1.619 0 0 1 1.62-1.619 1.619 1.619 0 0 1 1.618 1.62v9.896m.021-.095a1.64 1.64 0 0 0-3.28 0m3.28-8.299h.15"></path>
+                            <path stroke-dasharray="0.2747 1.8313" d="M12.539 11.586h7.509"></path>
+                            <path d="M20.963 11.586h.15v.15"></path>
+                            <path stroke-dasharray="0.16221 1.0814" d="M21.113 12.818v.702"></path>
+                            <path d="M21.113 14.061v.15h-.15"></path>
+                            <path stroke-dasharray="0.27553 1.83686" d="M19.126 14.211h-7.531"></path>
+                            <path d="M10.677 14.211h-.15m.031 1.386h1.89v2.649h-1.89m7.712-2.649h2.844v2.649H18.27zm-1.489 2.499v.15h-.15"></path>
+                            <path stroke-dasharray="0.17747 1.18314" d="M15.447 18.246h-.769"></path>
+                            <path d="M14.087 18.246h-.15v-.15"></path>
+                            <path stroke-dasharray="0.16389 1.09263" d="M13.937 17.003v-.71"></path>
+                            <path d="M13.937 15.747v-.15h.15"></path>
+                            <path stroke-dasharray="0.17747 1.18314" d="M15.27 15.597h.769"></path>
+                            <path d="M16.631 15.597h.15v.15"></path>
+                            <path stroke-dasharray="0.16389 1.09263" d="M16.781 16.839v.71"></path>
+                            <path d="M18.27 19.206h2.843m-2.843.96h.787m.885 0h.515m-6.52-.96h2.844m-2.844.96h.788m.884 0h.516m-5.598-.96h1.921m-1.172.96h.516m7.31-2.696l1.146-1.067m-1.107-.04l1.068 1.146m-9.682-.039l1.146-1.067m-1.106-.04l1.067 1.146"></path>
+                        </g>
+                    </svg>
+                </i>
+                <h3 class="h3-about">calendly</h3>
+                <p class="p-about1">Schedule a time to talk to us and get things moving.</p>
+                <p class="button-3">Book in</p>
+            </a>
+    </div>
+</div>
