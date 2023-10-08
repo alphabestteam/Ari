@@ -1,0 +1,70 @@
+{
+    "people": [
+      {
+        "name": "Ari",
+        "age": 22,
+        "cars": [
+          {
+            "model": "Mercedes",
+            "price": 25000,
+            "yearOfRelease": 2022,
+            "horsepower": 203,
+            "maxSpeed": 130,
+            "numOfCylinders": 4
+          },
+          {
+            "model": "porsche",
+            "price": 45000,
+            "yearOfRelease": 2021,
+            "horsepower": 450,
+            "maxSpeed": 155,
+            "numOfCylinders": 8
+          }
+        ]
+      },
+      {
+        "name": "Yael",
+        "age": 21,
+        "cars": [
+            {
+                "model": "Hyundai",
+                "price": 5000,
+                "yearOfRelease": 2015,
+                "horsepower": 103,
+                "maxSpeed": 250,
+                "numOfCylinders": 5
+              }
+
+        ]
+      }
+    ],
+    "cities": [
+      {
+        "name": "Petach Tikva",
+        "timezone": "Eastern Time",
+        "zipCode": "10001",
+        "population": 8398748,
+        "yearEstablished": 1624,
+        "mayor": {
+          "name": "Rami Grinberg",
+          "age": 60,
+          "yearElected": 2014,
+          "yearlySalary": 258750
+        }
+      },
+      {
+        "name": "Elad",
+        "timezone": "Pacific Time",
+        "zipCode": "90001",
+        "population": 39776830,
+        "yearEstablished": 1781,
+        "mayor": {
+          "name": "Israel Porush",
+          "age": 51,
+          "yearElected": 2013,
+          "yearlySalary": 254500
+        }
+      }
+    ]
+  }
+  

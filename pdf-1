@@ -1,0 +1,78 @@
+Question 1:
+Json is lightweight data-change format. easy ro use. based on program languages.
+
+Question 2:
+Json file contain json string and  json object inside the json string. its contain key and value, the key must be string and the value can be any type of json. 
+
+
+Question 3:
+classes and hash.
+
+Question 4:
+tuple, array, list, vector.
+
+Question 5:
+str, numbers, bool, objects, null, array.
+
+Question 6:
+str, numbers, bool, objects, null, array.
+
+Question 7:
+numeric values, boolean values, null value.
+
+Question 8:
+it can be empty.
+
+Question 9:
+The two primary parts that make up JSON are keys and values. we used them to get the value.
+
+Question 10:
+they are supported.
+
+Question 11:
+yes.
+
+Question 12:
+yes.
+
+Question 13:
+yes.
+
+Question 14:
+dict.
+
+Question 15:
+JavaScript Object Notation.
+
+Question 16:
+.json
+
+Question 17:
+by a comma.
+
+question 18:
+[].
+
+Question 19:
+{}.
+
+Question 20:
+yes.
+
+Question 21:
+json.loads() get json and return python object. json.parse() takes json object and return java script object.
+
+Question 22:
+XML is “Verbose” working with tags all the time. is bad Because is hard to write. 
+
+Question 23:
+JSON is an open data interchange format that is readable by both people and machines, is independent of any programming language and is a common API output in a wide variety of 
+    applications. what is no in XML.
+
+Question 24:
+Web API, Configuration Files, Data Storage and Interchange.
+
+Question 25:
+
+
+
