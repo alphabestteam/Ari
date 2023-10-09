@@ -1,0 +1,62 @@
+Question 1:
+according to the ~ symbol we are in at the home directory.
+
+Question 2:
+$ alias home='cd'.
+
+Question 3:
+$ mkdir world.
+
+Question 4:
+$ touch world/plan1.
+
+Question 5:
+$ cd world.
+
+Question 6:
+$ ls -a /usr/bin.
+
+Question 7:
+$ echo "Ari Wiesner".
+
+Question 8:
+$ less /etc/passwd.
+
+Question 9:
+$ cp plan1 ~/plan.
+
+Question 10:
+$ home.
+
+Question 11:
+$ mkdir world/MyStyle/
+
+Question 12:
+$ cd world/MyStyle 
+    $ touch File file filE
+
+Question 13:
+$ sudo cp -r .. /Dirtree.
+
+Question 14:
+$  home
+    $ rm -r world/MyStyle/.
+
+Question 15:
+$ mv world OriginalName.
+
+Question 16:
+$ man wc.
+    print all the lines, words, bytes, of the file.
+
+Question 17:
+$ wc -w -l OriginalName/plan1/
+
+Question 18:
+we can change the password now.
+    its in section 5.
+
+Question 19:
+if we write man /.etc/passwd we get all the information about passwd file.
+
+
