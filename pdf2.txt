@@ -1,0 +1,29 @@
+Question 1:
+    unix and linux: 
+        everything including everything is a file: General files - contain image, video, txt, program.
+                                                   Directory Files - this files is warehouse for others file types.
+                                                   Device files - also files.
+    windows:
+        devices represent like letters.  
+    
+Question 2:
+    General files - contain image, video, txt, program.
+    Directory Files - this files is warehouse for others file types.
+    Device files - also represent like files.
+
+Question 3:
+the root account is account that create while you install. is a superuser that can be access to restricted files, instal software, make change on the system and has administrative privileges..
+    so if you wanna do one of those stuff you need to log in like a root user.
+
+Question 4:
+in linux you can and in windows you can't.
+
+Question 5:
+    linux: home/username.
+    windows: 'C:\Documents\username'.
+
+Question 6: 
+    linux: '/tmp'.
+    windows: '/temp'.
+
+

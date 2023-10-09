@@ -1,0 +1,30 @@
+Question 1:
+The operating system is responsible for all the activities that we can do on our computer's screen (like write, watch a video and stuff like that).
+
+Question 2:
+The kernel is like the heart of the operating system, it responsible for all the base stuff like let the hardware talk with the software.
+
+Question 3:
+(linux have some advantages and we will write them in the next question but the special about linux is -) that he open source.
+
+Question 4:
+    advantage 1: the programer are able to design their own operating system.
+    advantage 2: its free.
+    advantage 3: its open source and everyone with base knowledge of programming can modify it.
+    advantage 4: its a secure system and if you got it in your computer you don't need antivirus anymore.
+    advantage 5: is a stability and reliability system.
+
+Question 5:
+    unix:
+        the main designed is for mainframes and used in enterprises and universities.
+        you may be have to pay for using his kernel.
+    linux:
+        clone of unix. its free. 
+
+Question 6:
+Distribution is versions/types of linux - some organizations hide their kernel to prevent hacking. and some organizations publish their variations of Linux so the whole world can benefit.
+
+Question 7:
+a hundreds of Distribution are existing out there. (some of them: Arch, CentOS, Debian, Fedora, Gentoo, LinuxMint ,OpenSUSE ,RedHat enterprise ,Slackware, Ubuntu)
+
+
