@@ -1,0 +1,59 @@
+Question 1:
+echo "Linux is the best" > language.
+
+Question 2:
+replace mode allows ypu to replace existing text by directly typing over it. 
+    to get into a replace mode you need to click on R and start typing characters.
+    
+Question 3:
+myfile 2 > errorfile. (enter all the errors in myfile into a file called errorsfile).
+
+Question 4:
+in linux everything is file. to every file has a File Descriptors.
+    so if for example program is running the print send to file Descriptor of the screen and then ypu can see the print on your screen.
+    
+Question 5:
+mycommend < myfile (the commend you wan takes data from my file).
+
+Question 6:
+vim myfile - opening file in vim.
+:wq - save the changes you have done and exit vim. 
+
+Question 7:
+the teacher need to write the commend: head -n 3 filename.
+
+Question 8:
+yes, we will replace the 'head' with 'tail'.
+
+Question 9:
+1:
+    i want into vim by write vim my_way and change the way to derech.
+2:
+    to get to line 4 need to write :4 and then enter, after that we need to write some number and then you click | and the curser go to the line and the letter that require.
+        after that to delete press x.
+3:
+/are.
+
+4:
+:%s /easy/kala/g.
+
+5:
+:w
+
+6:
+delete the require lines and then - :q.
+
+7:
+we go to the first line click 2yy it will be copy the 2 first lines, and then we go to the require line and click shift p to paste.
+
+8:
+click :w and  then enter the name of the file - our_way and then change my to our.
+
+9:
+its give a number to every line.
+
+10:
+click nonu.
+
+
+
