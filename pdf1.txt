@@ -1,0 +1,9 @@
+question 1:
+switch connect devises in network able the devises talk to each other.  
+    it allows to devises to connect to the network.
+        allow to routers send packets to the correct destination.
+            it can divide the network with VLAN.
+
+Question 2:
+by using the MAC address.
+
