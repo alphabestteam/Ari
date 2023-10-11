@@ -1,0 +1,55 @@
+Question 1:
+IETF stand for "Internet Engineering Task Force", they charge to define internet technologies.
+
+Question 2:
+is protocol that set a formal rules sey how to transmit or exchange data across the network.
+    this protocol codified as a standard.
+
+Question 3:
+RFC is stand for Request For Comments and is a formal document from the internet Engineering.
+
+Question 4:
+Hypertext Transfer Protocol.
+
+Question 5:
+HTTPS is exactly like HTTP but with encryption and verification. 
+    the different between those two is: https used with TLS(SSL) that help with the encryption and to digitally sign requests and responses.
+                                        http used with TCP (Transmission Control Protocol), is protocol that used in the top of the IP to make sure that all the packets arrive to the destination correctly. 
+    IP (Internet Protocol) allows us to sent data between devices on a network by contain location information and make devices accessible for communication
+
+Question 6:
+the general model of http is client server model by using requests and responses. meaning the user sand some requests and the server give him a response according to the requests.
+
+Question 7:
+user agent: is a name for any software who present data from the internet by web technologies, like web browsers media players and stuff like that.
+Web server: is a computer that runs a lot of websites, its also distributes wab pages like they requisitioned. are main objective is  to store, process and deliver web pages to the user.
+Proxies:    is a system/router who provide gateway between the user and the internet.
+
+Question 8:
+Proxies used for provide us a saver connection between our computer and the internet by a gateway between the computer and the internet.
+
+Question 9:
+if the protocol have a state it means that the system can be move from one state to another like determined by which processes take steps and which communication events occur.
+
+Question 10:
+no what means every requests is independent and not related to the previous request.
+
+Question 11:
+flow of http include: client request, server processing, server response, client processing, connection management. in this order. 
+
+Question 12:
+they contain more information about the resource that need to get or about the client that sent a require.
+
+Question 13:
+cookies are text that sent to your browser by the website that you are in it. 
+    the purpose of it is to halp to the website to remember data about your visits and make the site more useful for you.
+
+Question 14:
+request contain the request line (the HTTP, the method), the headers (like question 12), and the message body.
+
+Question 15:
+response contain the status-line, the header (zero or more), an empty line to note the end of the header fields, the message body.
+
+Question 16:
+HTTP 3 is less distinct - the HTTPS is in a application layer, the HTTPS and the QUIC create a built-in security layer, and also the QUIC and the UDP are create transport layer. 
+HTTP 2 is distinct application layer (HTTPS), a optional security layer (TLS) and transport layer (TCP) top on each other in this order. 
