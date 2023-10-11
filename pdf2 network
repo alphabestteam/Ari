@@ -1,0 +1,12 @@
+Question 1:
+A Virtual lan allow us to set up multiple vlan on the same switch.
+    it helps with security.
+        it helps with organizing.
+            its much cheaper because we can use the same switch instead of buy a new one for every one. 
+   
+Question 2:
+trunk port is used for connect multiple switches or vlans together to give them an access point.
+
+Question 3:
+when the packet was sent to the trunk port.
+
