@@ -1,0 +1,72 @@
+Question 1;
+Model.py its file that contains python classes and each class represent db table and each attribute of the classes represent colum in the db table. 
+    in model we have models field that tells to db what the type of the colum (Boolean, Char, data, file, json).
+        model.py is take care of the db.
+
+Question 2:
+Views.py file contains function that take care of the client's requests. this function can return data from the db and stuff like that.
+    this function need to get HttpRequest object and then return Httpresponse object like html, xml and json.
+        views.py is take care of the users requests.
+
+Question 3:
+Url.py is file that contain list of urls that our Django project is support. its also can decide that each app in our project will get his own urls.py file. 
+    the list maps the url into a function that handle the client's requests. this url create bu default ones we create project. 
+        url.py take care of the url that we gonna use in the projects and send the user to the view file to the relevant function.
+
+Question 4:
+if we did any changes in our model view we need to run some commends to actually see those changes in th db. 
+    we need this to keep our db and our model synchronized /
+        to add new migrations  - mange.py migrate.
+
+Question 5:
+it convert complex data that we get from the db into a python data that is more readable and from python we convert it to json. without it it very hard to convert directly to json.
+
+Question 6:
+Django rest is a very powerful and flexible toolkit for building web apis.
+
+Question 7:
+serializer convert complex data that we get from the db into a python data that is more readable and from python we convert it to json. without it it very hard to convert directly to json.
+    (like we said in Question 5).
+        ModelSerializer provided  a shortcut that lets you automatically create a Serializer class with fields that correspond to the Model fields.
+            tge different between the two: It will automatically generate a set of fields for you, based on the model.
+                                           It will automatically generate validators for the serializer, such as unique_together validators.
+                                           It includes simple default implementations of .create() and .update().
+        we want to use ModelSerializer when we want the model of the db and the regular serializer when its not exactly model.
+                                        
+Question 8:
+there is some kinds of relationship - one to one, many to one, many to many: 
+    many to one: implies that one record in one model relates to another models with many records. 
+    one to one: implies that one record in one django model relates to another.   
+    many to many: implies that many records in one model relates to another model with many records.
+
+Question 9:
+firs we need: django-admin startproject <name-of-project>.
+    py manage.py startapp <app-name>.
+        after this we create migrations by those commands "python manage.py makemigrations <app-name> and python manage.py migrate.
+            create view model.
+                add url.
+                    and run the server with this commands 'python manage.py runserver'.
+
+Question 10:
+clint make a request, than the urls.py direct the url with post request, views file maps the url to the right function,
+    parsing the data by the function, the function returns json or html.
+
+Question 11:
+Middleware is a framework of hooks in the processing of requests and response before they reached the view file or after they leave it . 
+    each component  is responsible for doing some specific function.
+        example to use Middleware: if user send a request and we want to check if the request.
+
+Question 12:
+they are a default data which you can put in your database if you want to make tests on your db.
+    if you want to export data from your database use "python manage.py dumpdata myapp.<my-modle> --output=<my-data>.json".
+        to load data from fixture use "python manage.py loaddata mydata.json".
+            for reset the database use python manage.py flush , and python manage.py loaddata mydata.json.
+
+Question 13:
+i chose the 'get' commend - this commend is retrieves a single object from the db. it return error if the object appear in the db more or less then once. 
+
+Question 14:
+Manager is interface that by him we can do query from the db. at least on manager exist for every model in Django.
+    the default manager - Django added a manager with the name objects to every Django model class.
+
+                                
