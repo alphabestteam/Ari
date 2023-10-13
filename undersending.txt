@@ -1,0 +1,12 @@
+Question 1:
+according to this line: "pattern": "^([\u05D0-\u05EA]|[\u05F3-\u05F4]|[A-Z]|[a-z]|[0-9]|[ \\-_])+$" that was written in carMakerName:
+    "Audi q3" "סוסיתא".
+
+Question 2:
+according to this lines in sensorType: "minimum": 1, 
+                                       "maximum": 10 
+every number between 1 - 10 is allowed, greater or less is not allowed.
+
+Question 3:
+
+
