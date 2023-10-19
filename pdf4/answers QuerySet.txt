@@ -1,0 +1,38 @@
+Question 1:
+Parent.objects.all().values() will print all the parents.
+
+Question 2:
+Parent.objects.filter(work_place = "Google").count().
+    count only the parents that are they work place is google (3).
+
+Question 3:
+Parent.objects.annotate(max_date_of_birth=Max('children__date_of_birth')).order_by('-max_date_of_birth')
+    annotate is good for calculated queryset like count max sum and like that. and then the order by ordered the result by: '-max_date_of_birth' - descending order and the oldest will be the first.
+
+Question 4:
+People.objects.filter(name__icontains = "i").values() will print only the people that they name contain i.
+
+Question 5:
+from django.db.models import Q
+People.objects.filter(Q(city = 'Raanana') | Q(city = 'Tel Aviv')).values().
+
+Question 6:
+from django.db.models import Avg
+Parent.objects.aggregate(average_salary=Avg('salary')).
+    aggregate is used when we want to calculate summary statistics or stuff like that. the result of function like this is dict.
+
+Question 7:
+Parent.objects.annotate(count_children=Count('children')).values('name', 'count_children')
+    we count all the children of this parent and then return his name and the number of his children.
+
+Question 8:
+Parent.objects.annotate(children_count=Count('children')).aggregate(children_sum=Sum('children_count')).
+
+Question 9:
+Parent.objects.filter(salary=Parent.objects.aggregate(Max('salary'))['salary__max']).            
+
+Question 10:
+from django.db.models import Sum
+People.objects.annotate(sum_parents_salary=Sum('parents__salary')).filter(sum_parents_salary__gte=50000). 
+    we accumulating the salary of all his parents and then return only if their salary together or separated is greater or equal to 5000.
+
