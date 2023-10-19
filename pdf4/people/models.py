@@ -14,3 +14,5 @@ class Parent(People):
     def __str__(self):
         return f"Name: {self.name}, Id: {self.people_id}, Birth: {self.date_of_birth}, City: {self.city}, Work place: {self.work_place}, salary: {self.salary}, Children: {self.children}"
     
+
+
