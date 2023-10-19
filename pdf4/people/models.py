@@ -8,7 +8,7 @@ class People(models.Model):
     
 class Parent(People):
     work_place = models.CharField(max_length = 30)
-    salary = models.DecimalField(max_digits = 8, decimal_places = 2)
+    salary = models.IntegerField(max_length= 8)
     children = models.ManyToManyField(People, related_name = "parents", default = [])
 
     def __str__(self):
