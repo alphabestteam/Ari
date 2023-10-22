@@ -12,39 +12,40 @@ import datetime
 
 @csrf_exempt
 def add_people(request):
-    try:
         if request.method == 'POST':
-            object_data = JSONParser().parse(request)
-            data_deserialized = PeopleSerializers(data=object_data)
-            if data_deserialized.is_valid():
-                data_deserialized.save()
-                return HttpResponse("The person saved!", status=200)
-    except:
-        return HttpResponse("Something want wrong", status=400)
+            try:
+                object_data = JSONParser().parse(request)
+                data_deserialized = PeopleSerializers(data=object_data)
+                if data_deserialized.is_valid():
+                    data_deserialized.save()
+                    return HttpResponse("The person saved!", status=200)
+            except:
+                return HttpResponse("Something want wrong", status=400)
 
 @csrf_exempt
 def update_people(request):
-    try:
         if request.method == 'PUT':
-            data = json.loads(request.body)
-            people_id = data["people_id"]
-            people = People.objects.get(people_id=people_id)
-            people_serialized = PeopleSerializers(people, data=data)
-            if people_serialized.is_valid():
-                people_serialized.save()
-                return HttpResponse("the person updated!", status=200)
-    except:
-        return HttpResponse("Something in add people want wrong!", status=400)
+            try:
+                data = json.loads(request.body)
+                people_id = data["people_id"]
+                people = People.objects.get(people_id=people_id)
+                people_serialized = PeopleSerializers(people, data=data)
+                if people_serialized.is_valid():
+                    people_serialized.save()
+                    return HttpResponse("the person updated!", status=200)
+            except:
+                return HttpResponse("Something in add people want wrong!", status=400)
     
 @csrf_exempt
 def delete_people(request, id):
-    try:
+    
         if request.method == 'DELETE':
-            people = People.objects.get(people_id=id)
-            people.delete()
-            return HttpResponse({"The person was deleted!"}, status=200)
-    except:
-        return HttpResponse("This person not exist!", status=400)
+            try:
+                people = People.objects.get(people_id=id)
+                people.delete()
+                return HttpResponse({"The person was deleted!"}, status=200)
+            except:
+                return HttpResponse("This person not exist!", status=400)
 
 
 
@@ -70,27 +71,27 @@ def add_parent(request):
 
 @csrf_exempt
 def update_parent(request):
-    try:
         if request.method == 'PUT':
-            data = json.loads(request.body)
-            people_id = data["people_id"]
-            parent = Parent.objects.get(people_id=people_id)
-            parent_serialized = ParentSerializers(parent, data=data)
-            if parent_serialized.is_valid():
-                parent_serialized.save()
-                return HttpResponse("the parent updated!", status=200)
-    except:
-        return HttpResponse("Could'nt update this id!", status=400)
+            try:    
+                data = json.loads(request.body)
+                people_id = data["people_id"]
+                parent = Parent.objects.get(people_id=people_id)
+                parent_serialized = ParentSerializers(parent, data=data)
+                if parent_serialized.is_valid():
+                    parent_serialized.save()
+                    return HttpResponse("the parent updated!", status=200)
+            except:
+                return HttpResponse("Could'nt update this id!", status=400)
     
 @csrf_exempt
 def delete_parent(request, id):
-    try:
         if request.method == 'DELETE':
-            people = People.objects.get(people_id=id)
-            people.delete()
-            return HttpResponse("The parent was deleted!", status=200)
-    except:
-        return HttpResponse("This parent not exist!", status=400)
+            try:
+                people = People.objects.get(people_id=id)
+                people.delete()
+                return HttpResponse("The parent was deleted!", status=200)
+            except:
+                return HttpResponse("This parent not exist!", status=400)
 
 
 @csrf_exempt
@@ -129,63 +130,63 @@ def specific_parent(request, id):
             }
             return JsonResponse(response_data, safe=False)
         except:
-            return HttpResponse("Parent not found.",status=404)
+            return HttpResponse("Parent not found.",status=400)
     
 @csrf_exempt
 def rich_parent(request):
-    try:
         if request.method == "GET":
-            adult = datetime.datetime.now().year - 18
-            rich = People.objects.filter(Q(parents__salary__gte=50000) & Q(date_of_birth__year__gte=adult))
-            rich_data = [PeopleSerializers(rich_child).data for rich_child in rich]
-            return JsonResponse({"Rich Children": rich_data}, safe=False, status=200)
-    except:
-            return HttpResponse("Not found parent in those condition!",status=400)
+            try:
+                adult = datetime.datetime.now().year - 18
+                rich = People.objects.filter(Q(parents__salary__gte=50000) & Q(date_of_birth__year__gte=adult))
+                rich_data = [PeopleSerializers(rich_child).data for rich_child in rich]
+                return JsonResponse({"Rich Children": rich_data}, safe=False, status=200)
+            except:
+                return HttpResponse("Not found parent in those condition!",status=400)
     
 @csrf_exempt
 def find_parent(request, id):
-    try:
          if request.method == 'GET':
-            child = Parent.objects.get(people_id = id)
-            parents = ParentSerializers(child.parents.all(), many=True).data
-            return JsonResponse({"Parents":parents}, safe=False, status=200)
-    except: 
-        return HttpResponse("Sorry, We can't found this children's parents. try again later", status=400) 
+            try:
+                child = Parent.objects.get(people_id = id)
+                parents = ParentSerializers(child.parents.all(), many=True).data
+                return JsonResponse({"Parents":parents}, safe=False, status=200)
+            except: 
+                return HttpResponse("Sorry, We can't found this children's parents. try again later", status=400) 
 
 @csrf_exempt
 def find_child(request, id):
-    try:
          if request.method == 'GET':
-            parent = Parent.objects.get(people_id = id)
-            child = PeopleSerializers(parent.children.all(), many=True).data
-            return JsonResponse({"Children":child}, safe=False, status=200)
-    except: 
-        return HttpResponse("Something want wrong to found this parent's children;( ", status=400)
+            try:
+                parent = Parent.objects.get(people_id = id)
+                child = PeopleSerializers(parent.children.all(), many=True).data
+                return JsonResponse({"Children":child}, safe=False, status=200)
+            except: 
+                return HttpResponse("Something want wrong to found this parent's children;( ", status=400)
 
 @csrf_exempt
 def find_grand(request, id):
-    try:
          if request.method == 'GET':
-            child = Parent.objects.get(people_id = id)
-            parents = child.parents.all()
-            grands = []
-            for parent in parents:
-                grands.extend(parent.parents.all())
-            grand_serializer = ParentSerializers(grands, many=True).data
-            return JsonResponse({"Grands":grand_serializer}, safe=False, status=200)
-    except:
-        return HttpResponse ("can't find any grands", status=400)
+            try:
+                child = Parent.objects.get(people_id = id)
+                parents = child.parents.all()
+                grands = []
+                for parent in parents:
+                    grands.extend(parent.parents.all())
+                grand_serializer = ParentSerializers(grands, many=True).data
+                return JsonResponse({"Grands":grand_serializer}, safe=False, status=200)
+            except:
+                return HttpResponse ("can't find any grands", status=400)
 
 @csrf_exempt
 def find_siblings(request, id):
-    try:
         if request.method == 'GET':
-            child = Parent.objects.get(people_id = id)
-            parents = child.parents.all()
-            siblings = []
-            for children in parents:
-                siblings.extend(children.children.all())
-            sibling_serialized = PeopleSerializers(siblings, many=True).data
-            return JsonResponse({"Siblings":sibling_serialized}, safe=False, status = 200)
-    except:
-        return HttpResponse("Can not found siblings to this child", status = 400)
+            try:
+                child = Parent.objects.get(people_id = id)
+                parents = child.parents.all()
+                siblings = []
+                for children in parents:
+                    siblings.extend(children.children.all())
+                sibling_serialized = PeopleSerializers(siblings, many=True).data
+                return JsonResponse({"Siblings":sibling_serialized}, safe=False, status = 200)
+            except:
+                return HttpResponse("Can not found siblings to this child", status = 400)
