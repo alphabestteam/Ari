@@ -1,0 +1,28 @@
+Question 1:
+nginx is a web server - its a server software how can communicate with HTTP protocol.
+    its serves internet content, routes requests to the backend serves, and also content caches. 
+    advantages:
+        fast.
+        efficiency.
+        scalability.
+
+Question 2:
+i change this line:
+    listen       8080;
+
+Question 3:
+<!DOCTYPE html>
+<html>
+    <body style="background-color: black;">
+        <h1 style="color: blue;">
+            hello world
+        </h1>
+    </body>
+</html>
+
+
+
+
+
+
+
