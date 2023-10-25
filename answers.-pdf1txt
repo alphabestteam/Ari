@@ -1,0 +1,89 @@
+Requests:
+    Question 2:
+    we use '@api_view(['PUT'])' instead of 'if request.method == 'PUT':'.
+        and also we can delete the JSON.parser and use request.data instead.
+
+Question 3:
+request.query_params it helps us to keep our code more clean and readable. 
+    in my code i used it in the search_book function like this: author = request.query_params["author"] 
+        and then in the url: localhost:8000/api/books/SearchBook/?author=Daniel to get the book that was write by the input you entered.
+
+Responses:
+    Question 4:
+    basically they area the same but Httpresponse can return only str, and if you try to return dict ot list Httpresponse will converts them into str,
+        VS Response that know how to handle str, dict, and list.
+
+Views:
+    Question 5:
+    Function-Based Views: its very easy to understand what make ot good for beginners, and also if you want to focus on understanding in the core fundamentals FBV can help you with that.
+        the implement:
+            def example_create_view(request, pk):
+        Class-Based Views: they alternatives of FBV, it implemented in project's python. they take care on the  functionalities such as deleting an item or add an item.
+        it's difficult for beginners. 
+            the implement:
+                class MyCreateView(View):
+
+    Question 6:
+    we can do it by using for example - @api(['GET', 'POST']).
+
+Serializers:
+    Question 7:
+    save() check - if we have in the serializer instance and date then he knows he need to update the object, but if we got in the serializer only data without instance he create a new object. 
+
+    Question 8:
+    by writing serializer.error and it will be printing the errors.
+    
+    Question 9:
+    This line is use for checking if the input that entered is according to the rules that we defined, if the input is not fit we get exception.
+        I think its a better way because it gives you the error in an efficient and concentrated way. and also it help to write code more readable.
+    
+    Question 10:
+    the answer is in models file.
+
+    Question 11:
+    the answer is in views file.
+
+    Question 12:
+    This parameter is inside the META class, he used for control in the deep of the serializer will display related data.
+         for example if we have a model that represent books and also model that represent reviews, 
+            if you defined you depth to 1 the serializer will be include only the details from the book but not from the reviews.   
+    
+    Question 13:
+    the answer is in serializers file.
+
+    Question 14:
+    if we want to keep the user from changing the value until some other conditions will be done - we can put the value into a read only field and then u=its only for read.
+        the example in serializer file.
+    
+    Question 15:
+    this method is field to read only, he fot his value by calling a method on the serializer.
+        we can use it for adding any kind of data.
+
+Serializer relations:
+    Question 16:
+    if we want to contact between models by many to many relationships we can do it by this slug by specifying a related model's unique identifier (usually a slug) rather than its primary key.
+        if we write read_only = True we cant change the field but only read it.
+            The implement in the serializer (and models and views) files.
+    
+    Question 17:
+    select_related: use for querying ForeignKey and one to one relationships. 
+        Its particularly useful if we need to access related fields and their data in the template or other parts of our code.
+            for example: book = Book.objects.select_related('author').get(id=1).
+    prefetch_related: use for querying many to many and reverse ForeignKey and one To one relationships.
+        Its particularly useful when we have a large number of related objects.
+            for example: authors = Author.objects.prefetch_related('book_set').all().
+    
+    Question 18:
+    the answer in the serializer and model files.
+
+    Question 19:
+    Writable nested serializers alow us to create / update / delete  model instances within a parent model's serializer without writing code for the nested serializers. 
+    it works like this: 
+                    step one: create separate serializers for the parent and for the related model.
+                    step two: at the father serializer create field that reference to the related model.
+                    step three: create method inside the parent to take care of create and update related instances.
+    after those steps you can use the serializer of the parent to take care of his actions or his child actions.  
+        in the Album example: we can create a new album and related tracks by single request using serializer with a nested structure.
+        I found library that doing that: 'drf-nested-routers'
+
+
