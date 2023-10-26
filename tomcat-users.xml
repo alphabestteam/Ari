@@ -21,7 +21,7 @@
               version="1.0">
     
               <user username="Tom" password="Aa123456" roles="admin-gui, manager-gui"/>
-              <user username="Ari" password="Aa123456" roles="manager-gui">
+              <!-- <user username="Ari" password="Aa123456" roles="manager-gui"> -->
 <!--
   By default, no user is included in the "manager-gui" role required
   to operate the "/manager/html" web application.  If you wish to use this app,
