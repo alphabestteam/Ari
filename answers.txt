@@ -1,0 +1,32 @@
+Question 1:
+wab application is a server software thar runs in our computer. they can help us with connect to client in a secure way.    
+    they alow you to access complex functionality with no need to download anything. 
+        they dynamic and  interactive. 
+
+Question 2:
+web site is a collection of web page hosted in the server and you can reach them by the browser. they primarily delivers static content like text and stuff like that.
+    usually websites are informational, but with no user interactions and real-time updates.
+
+Question 3:
+they can be used for blogs, news protocol, and company websites, they can store an protect website data, control bandwidth, they can also use like hosting for tun some apps, and the web scripts are in the server side.
+    the advantages:
+        the web server available 24/7.
+        improved Performance.
+        security - they offer better data and regular information protection.
+        Flexibility by hosting the application on a web server.
+
+Question 4: 
+Java servlet is class in Java that used for extend the performance of the servers that hosting app that can be reached by request-response model. 
+    even though the servlet can response for every type of request usually they use for extend the applications hosted by web servers.
+
+Question 5:
+Apache Tomcat is open source app. it provide  web server(its web server not app server) environment by "pure Java".
+
+Question 6:
+Advantages:
+    open source.
+    it can handle static pages and dynamic pages.
+
+Disadvantages:
+    it can be used only for hosting JAVA based code.
+    Apache Tomcat server is slower compare to Apache web serve.

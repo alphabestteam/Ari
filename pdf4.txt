@@ -1,0 +1,4 @@
+The two ways I did is: 
+                    The first one: I just copy the sample folder to the webapps folder and then in the url you add /sample and then we can see the content of the sample folder.
+                    The second way: in the home screen of localhost:9000 I entered to Manager App and there in 'WAR file to deploy' filed i chose the sample folder.
+                        
