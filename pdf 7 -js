@@ -1,0 +1,12 @@
+const friends = ["Sandy", "Petrick", "Squidward", "Mr.Krabs", "Gray"]
+console.log(friends)
+console.log(friends.length)
+
+friends.push("Mrs. puff")
+console.log(friends)
+console.log(friends.length)
+
+friends[0] = "Pearl";
+console.log(friends)
+
+// const means that we cant change the reference of this array, but the elements we can change because changing the elements or the amount of them  don't change the reference.   
