@@ -1,0 +1,105 @@
+// Question 1:
+// both of them do the same thing but arr.at() is a new option that was added in 2020.
+// arr.at() is more useful when we want to get to element in specific index because it will give you to enter idex that not surely correct and it will return undefined instead of throw error.
+// and also it can handle with negative index.
+
+// Question 2:
+function numAndStr(str, num) {
+    if (num < 0) {
+        return "Teh number can't be negative!"
+    } else {
+        return Array(num).fill(str);       
+    }
+} 
+
+// Question 3:
+function sliceArr(arr, num) {
+    if (num > arr.length) {
+        return "The number can't be longer then the array!"
+    } else {
+        arr.splice(-num);
+        return arr;
+    } 
+} // splice get the length you want to delete, and the '-' make it happen from the end.
+
+// Question 4:
+function addNum(arr, num) {
+    arr.unshift(num)
+    return arr;
+}
+
+//Question 5:
+function concatArr(arr1, arr2) {
+    union = arr1.concat(arr2)
+    return union;
+}
+
+// Question 6:
+function toUpperCase (arr) {
+    upper = arr.map(element => {
+        return element.toUpperCase();
+    });
+     
+    return upper;
+}
+
+// Question 7:
+function twoDigit (arr) {
+    filteredNum = arr.filter(num => {
+        return num/10 >= 1 && num/10 <= 9;
+    });
+
+    return filteredNum;
+}
+
+// Question 8:
+function includeNum(arr, parameter) {
+    return arr.includes(parameter)
+}
+
+// Question 9:
+function graterTen (arr) {
+    y = arr.find(num => {
+        return num >= 10;
+    });
+
+    return y;
+}
+
+// Question 10:
+function trueOrFalse (arr) {
+    const booleanReturn = graterTen(arr)
+    return booleanReturn != undefined
+} // it will be return true if the previous function found any number that fit to the require condition, and false if it don't.
+
+// Question 11:
+// because when the array is fill with numbers the sort method check for every number the first number that it start wit;
+// "1" start with 1 so it will be first, "100000" also start with 1 so it will be the second, after those numbers will be 21 that start with two and like that till the end. 
+
+// Question 12:
+const array1 = [1, 30, 4, 21, 10000];
+array1.sort(function(a, b){return a-b});
+
+// Question 13:
+function joinFunction (arr) {
+    return arr.join("**")
+}
+
+// Question 14:
+function alphaBeta (arr) {
+    return arr.sort();
+}
+
+// Question 15:
+function every (arr, target) {
+    return arr.every(num => {
+        return num < target 
+    })
+} 
+
+// Question 16:
+function greater (arr, target) {
+    return arr.some(num => {
+        return num > target 
+    })
+} 
