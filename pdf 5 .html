@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input">
+    <button onclick=checkGarde()>Check Grade</button>
+
+    <script>
+        function checkGarde() {
+            let resultLetters = "";
+            let resultSentence = "";
+            const grade = parseInt(document.getElementById("input").value);
+
+            if (grade > 100 || grade < 0) {
+                resultLetters = "You entered illegal grade";
+
+            } else if (grade == 100) {
+                resultLetters = "A+";
+
+            } else if (grade >= 90 && grade <= 99) {
+                resultLetters = "A";
+
+            } else if (grade >= 80 && grade <= 89) {
+                resultLetters = "B";
+
+            } else if (grade >= 70 && grade <= 79) {
+                resultLetters = "C";
+
+            } else if (grade >= 60 && grade <= 69) {
+                resultLetters = "D";
+
+            } else if (grade > 50 && grade <= 59) {
+                resultLetters = "E";
+
+            } else {
+                resultLetters = "F";
+            }
+
+            switch (resultLetters) {
+                case "A+":
+                    resultSentence = "Perfect!";
+                    break;
+
+                case "A":
+                    resultSentence = "Amazing!";
+                    break;
+
+                case "B":
+                    resultSentence = "Nicely done!";
+                    break;
+
+                case "C":
+                    resultSentence = "This is fine!";
+                    break;
+
+                case "D":
+                    resultSentence = "You can do better!";
+                    break;
+
+                case "E":
+                    resultSentence = "Moed B in en option";
+                    break;
+
+                case "F":
+                    resultSentence = "Moed B is a must";
+                    break;
+
+                default:
+                    resultSentence = "You entered illegal grade";
+            }
+
+            const resultDiv = document.createElement("div");
+            resultDiv.innerHTML = `The grade you entered is: ${grade}, what mean you got: ${resultLetters}, ${resultSentence}`;
+            document.body.append(resultDiv);
+        }
+    </script>
+
+</body>
+
+</html>
