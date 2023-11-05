@@ -77,4 +77,20 @@ textToArr.forEach(word => {
 });
 
 
+// pdf 14:
+const button = document.querySelector("button")
 
+button.addEventListener("click", () => {
+    const span = randomWords.querySelectorAll("span");
+    span.forEach(span => {
+    const style = "background-color: " + randomColorRGB();
+        span.setAttribute("style", style)
+    });
+});
+
+function randomColorRGB () {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    return `rgb(${red}, ${green}, ${blue})`;
+};
