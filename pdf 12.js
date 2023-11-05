@@ -13,6 +13,7 @@ function Student(name, age, grade) {
 }
 
 
+
 const student1 = new Student("Ari", 22, [91, 82, 93, 84])
 const student2 = new Student("Daniel", 21, [100, 20, 33, 46])
 const student3 = new Student("Hen", 20, [51, 52, 73, 94])
