@@ -10,3 +10,4 @@ function findSeashellsIndicies(target, values) {
 };
 //  for example:
 let calculate = findSeashellsIndicies(30, [25, 21, 15, 10, 5])
+console.log(calculate)
