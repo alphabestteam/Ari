@@ -64,4 +64,3 @@ function sign(date){
             sign = "Wrong date";
         }
       }
-      
