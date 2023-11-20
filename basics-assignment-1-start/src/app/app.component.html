@@ -1,0 +1,7 @@
+<div class="container">
+
+  <app-warning-alert *ngIf="!isSuccess"></app-warning-alert>
+  <app-success-alert *ngIf="isSuccess"></app-success-alert>
+  <button class=" button" type="button" (click)="onClick()" (click)="changeText()"> {{btnText}}</button>
+
+</div>
