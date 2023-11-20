@@ -1,0 +1,20 @@
+<button (click)="changeAlerts()">Change color of the repeat Alerts</button>
+
+<mat-card *ngIf="selectedAlert" class="custom-card">
+</mat-card>
+
+<mat-card *ngIf="!selectedAlert" class="custom-card">
+</mat-card>
+
+<mat-select [(ngModel)]="repeatCount">
+    <mat-option *ngFor="let count of repeatOptions" [value]="count">{{ count }}</mat-option>
+</mat-select>
+
+<mat-card>
+    <mat-card-content *ngIf="selectedAlert">
+        <app-success-alert *ngFor="let index of getRepeatArray()"></app-success-alert>
+    </mat-card-content>
+    <mat-card-content *ngIf="!selectedAlert">
+        <app-warning-alert *ngFor="let index of getRepeatArray()"></app-warning-alert>
+    </mat-card-content>
+</mat-card>
