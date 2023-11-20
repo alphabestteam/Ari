@@ -10,10 +10,12 @@ export class AppComponent {
   isSuccess: boolean = true;
   onClick() {
     this.isSuccess = !this.isSuccess
+    this.changeText()
   }
 
   clicked: boolean = false;
   btnText = "Button";
+
   changeText() {
     if (this.clicked) {
       this.btnText = "Show warning alert!"
