@@ -1,0 +1,5 @@
+<div class="all">
+    <p>my-outer works!</p>
+    <app-my-inner [innerTotal]="innerTotal" (outerTotalChange)="updateOuterTotal($event)"></app-my-inner>
+    <p>Outer Total: {{ outerTotal }}</p>
+</div>
