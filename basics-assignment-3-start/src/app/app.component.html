@@ -1,0 +1,6 @@
+<button class="btn btn-primary" (click)="onClick()">Display Details</button>
+<p *ngIf="display">Secret Password = tuna</p>
+
+<div *ngFor="let count of counter; let clicked = index" [ngClass]="{'background-color': clicked >= 4}">
+  {{ count }}
+</div>
