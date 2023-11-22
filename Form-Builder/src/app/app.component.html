@@ -1,0 +1,71 @@
+<form class="form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <div class="field">
+    <label class="label">username</label>
+    <input type="text" class="input" formControlName="username" 
+    [ngClass]= "{'invalid': profileForm.get('username')?.invalid && (profileForm.get('username')?.touched || profileForm.get('username')?.dirty)}"/>
+    <div *ngIf="profileForm.get('username')?.hasError('required') && (profileForm.get('username')?.touched || profileForm.get('username')?.dirty)"
+    [ngClass]="{'error': profileForm.get('username')?.hasError('required')}">
+      Username must be at least 3 characters.
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">email</label>
+    <input type="text" class="input" formControlName="email" 
+    [ngClass]= "{'invalid': profileForm.get('email')?.invalid && (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)}"/>
+    <div *ngIf="profileForm.get('email')?.hasError('required') && (profileForm.get('email')?.touched || profileForm.get('email')?.dirty)" 
+    [ngClass]="{'error': profileForm.get('email')?.hasError('required')}">
+      The email should be in email format.
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label">password</label>
+    <input type="text" class="input" formControlName="password" 
+    [ngClass]= "{'invalid': profileForm.get('password')?.invalid && (profileForm.get('password')?.touched || profileForm.get('password')?.dirty)}"/>
+    <div *ngIf="profileForm.get('password')?.hasError('required') && (profileForm.get('password')?.touched || profileForm.get('password')?.dirty)"
+      [ngClass]="{'error': profileForm.get('password')?.hasError('required')}">
+      The password must be at least 8 characters.
+    </div>
+  </div>
+
+  <div>
+    <button [disabled]="!profileForm.valid" type="submit" class="button">Register</button>
+  </div>
+</form>
+
+<div  class="print" *ngIf="isValid">
+  <h1><b> Details: </b></h1>
+  <p><b> User Name:</b> {{profileForm.value.username}}</p>
+  <p><b> Email:</b> {{profileForm.value.email}}</p>
+  <p><b>Password:</b> {{profileForm.value.password}}</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<button type="button" (click)="updateProfile()">Update Profile</button>
+
+<div formArrayName="aliases">
+  <h2>Aliases</h2>
+  <button type="button" (click)="addAlias()">+ Add another alias</button>
+  <div *ngFor="let alias of aliases.controls; let i=index">
+     The repeated alias template -->
+<!-- <label for="alias-{{ i }}">Alias:</label>
+    <input id="alias-{{ i }}" type="text" [formControlName]="i">
+  </div>
+</div>  -->
