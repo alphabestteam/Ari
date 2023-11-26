@@ -1,0 +1,5 @@
+First of all we created file called app.py that contain the "hello world" print.
+    after this we created Dockerfile with the base commends.
+        after that we need to build the img with - docker build -t hello-world-image .
+            and then with docker run hello-world-image we run the img and the hello world printed.
+            

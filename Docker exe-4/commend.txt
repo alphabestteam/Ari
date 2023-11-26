@@ -1,0 +1,12 @@
+Question 1:
+to save the container into our computer:
+    docker run -d --name my-mysql-container -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Ari -e MYSQL_USER=Ari -e MYSQL_PASSWORD="" -p 3306:3306 -v C:\Users\ארי ויזנר\Desktop\valume:/var/lib/mysql mysql
+
+Question 2:
+the data store in the defined folder that i just added. this folder include sql, schemas and other files.
+    
+Question 3:
+docker stop mysql-container 
+
+Question 4:
+its added a few files (like redo undo tem and stuff like that) and the other stuff stay the same.

@@ -1,0 +1,7 @@
+Question 1:
+to save image as a tar file - docker save -o mysql_name.tar mysql
+
+Question 2:
+to change into a image file again - docker load -i mysql.tar
+
+

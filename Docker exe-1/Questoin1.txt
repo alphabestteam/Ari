@@ -1,0 +1,28 @@
+Question 1:
+Behind every site or app there are a few servers with different roles and its make a lot of servers.
+    Docker is a software that allow us develop environment and run apps on containers. 
+        its gives us separation between our apps and the they infrastructure, so we can spread easier and faster (we don't need to  install on the computer nothing but docker engine.).
+
+Question 2:
+Docker img is a pattern to create and define a container. its include the require instructions to build a container. 
+    this pattern is read only!
+        to create img we have three options: 
+            1: by registry - remote repository of img that we can pull from there images. 
+            2: by tar file - load from file that already exists. 
+            3: by dockerfile - file that we can build from it docker image. this file contain instructions how to build a container.
+
+Question 3:
+its like a mini machine that run over the operating system of the server. we can connect him like every else server.
+    its based on the img file and create when we run the img. 
+
+Question 4:
+img is the pattern and the container is the program its self.
+
+Question 5:
+Environment variables are constants available to any programs running in a Docker container. 
+    they are usually used to say how the program behaves.
+
+Question 6:
+the volumes role is to connect folder in our local machine into a folder in the container.
+    Its purpose is to provide information that the container uses and to display the information created in the container.
+

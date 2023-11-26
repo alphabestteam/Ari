@@ -1,0 +1,12 @@
+part one:
+first of all to connect to the db I used - docker load -i mysql.tar (after I download the file of course).
+    to upload the container with environment variable and connect with use root and with no password and with my name I used the code:
+        docker run -d --name my-mysql-container -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Ari -e MYSQL_USER=Ari -e MYSQL_PASSWORD="" -p 3306:3306 mysql. 
+
+part two: 
+to delete the container first of all we need to stop it -  docker stop  my-mysql-container,
+    and ten to remove -  docker rm  my-mysql-container
+
+to rebuild - docker run -d --name my-mysql-container -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=Ari -e MYSQL_USER=Ari -e MYSQL_PASSWORD="" -p 3306:3306 mysql.
+
+
