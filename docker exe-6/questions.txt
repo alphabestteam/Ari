@@ -1,0 +1,16 @@
+Question 1:
+Layers can speed up the process by a few things: 
+    a: every layer take care for a different task.  
+    b: layers can gives us replacement of components without affect on the system.
+    c: layers save they date and allow take care of independent maintenance.
+    d: they make the control and testing much easier. 
+
+Question 2:
+the first option is better because when we use the && is combine a few commands to one RUN and its promise one layer - make the image efficient ans smaller then a few layers.
+
+Question 3:
+to check the num of the layers we can use - docker history - it will print us a table with all the layers.
+
+    
+ 
+ 

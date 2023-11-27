@@ -1,0 +1,13 @@
+Question 1:
+to run the tomcat image first of all we need to pull it - "docker pull tomcat:latest and then run it - docker run -p 8080:8080 tomcat".
+
+Question 2:
+but now we got en error 404 so i found the solution in google and it said to run those commends after we run the first commend:
+    1. "docker run -d --name mytomcat -p 8080:8080 tomcat:latest"
+    2. "docker exec -it mytomcat /bin/bash"
+    3. "mv webapps webapps2"
+    4. "mv webapps.dist/ webapps"
+
+Question 3:
+to build our selfs image after we create dockerfile - "docker build -t custom-tomcat".
+and to run it - "docker run -p 8080:8080 custom-tomcat".

@@ -1,0 +1,12 @@
+Part One: 
+docker build -t app1:1 . (create the image)
+docker run --name docker_is_the_best -p 5000:5000 app1:1 (run the container and give it a name)
+
+
+docker ps -a (to see all the containers)
+
+docker stop docker_is_the_best (to stop the container)
+docker rm docker_is_the_best (to remove the container)
+
+Part Two:
+docker run --name docker_is_the_best -v c:\Users\ארי ויזנר\Desktop\toGitHub\Ari\docker exe-7:\app\logs\ -p 5000:5000 app1:1
