@@ -1,0 +1,33 @@
+Part One:
+Question 1:
+first we have the version of the Docker we use.
+
+the service contain all the containers, we have two containers: 
+mongo: first the name of the image.
+        the container name.
+        the environment variables.
+        the ports we want to use.
+        the volume we want to use.
+
+mongo-express: first the name of the image.
+                the container name.
+                the environment variables.
+
+and then we have the volumes: the data and the configurations are persisted using named volumes.
+
+Question 2:
+the problem is that we don't have a port in the mango-express container.
+
+Question 3:
+we added the port 8081:8081 in the mongo-express container. 
+
+Question 4:
+by the commend - "docker-compose down"
+
+
+Part Two:
+i created a env file and write there the environment variables and then in the yml file i did like this - ME_CONFIG_MONGODB_ADMINUSERNAME: ${ME_CONFIG_MONGODB_ADMINUSERNAME}.
+    AND NOW IF WE WANT TO CHANGE SOMETHING WE CAN CHANGE IT IN THE ENV FILE AND IT WILL BE CHANGE EVERYWHERE (By mistake it clicked on caps lock and I realised it too late ;( )
+
+
+
