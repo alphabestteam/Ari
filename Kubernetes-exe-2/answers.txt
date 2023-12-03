@@ -1,0 +1,2 @@
+the object the able us to communicate between deployments is Service:
+service is an object that provides a stable endpoint and manages traffic flow within the cluster, enabling communication between Pods.
