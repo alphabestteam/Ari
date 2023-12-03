@@ -1,0 +1,11 @@
+Question 1: 
+to create work environment we have two ways: 
+                                            the first one: create a namespace file dot yaml.
+                                            the second one: by the CLI using the commend - "kubectl apply -f first-namespace.yaml"
+                        
+Question 2:
+to upload the two parts I created two files backend and frontend dot yaml. 
+    I pull the images from the github for the back and the front and then I apply both of them.
+        and by "kubectl get pods -n first-namespace" we can see the status.
+
+
