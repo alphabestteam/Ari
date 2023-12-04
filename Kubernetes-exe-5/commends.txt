@@ -1,0 +1,7 @@
+I use in this commend for the front "kubectl scale deployment frontend-deployment --replicas=3"
+    and this commend for the back "kubectl scale deployment backend-deployment --replicas=3"
+
+
+The purpose of scaling is to adjust the number of pods running the application. 
+    I might want to scale mostly when my application experiences increased traffic, scaling allows to distribute the load across multiple pods.
+        It also can halp me tho improve the availability or for resource utilization.
