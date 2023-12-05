@@ -1,0 +1,6 @@
+Question 3:
+if we don't create service account the kubernetes will use automatically in the default service account that was assigned to the cluster.
+
+Question 4:
+service account is allow to applications or any process that running in inside the pod interact with the kubernetes API server and do stuff in the cluster.
+    it also gives us way to connect identity with a pod. 
