@@ -1,0 +1,14 @@
+Question 1:
+first of all I write the commend - "minikube addons enable metrics-server" to allow metrics-server
+    and then I used "minikube addons enable metrics-server" to get all the resources the pods use.
+                                    Screenshot attached!
+
+Question 2:
+to limit the resources on the pods I added "resources" in the frontend and backend deployment...
+
+
+
+
+
+
+
