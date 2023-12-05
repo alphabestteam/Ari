@@ -1,0 +1,9 @@
+Question 1:
+Readiness probes give us a possibility to tell the kubernetes that running a container - do not get a traffic until the other tasks will be completed.
+    for example - load files, creating network connections and stuff like that. 
+
+Question 2:
+if the Readiness probes not exist in our kubernetes it can lead to a few problems but the main problems are:
+                                sometimes containers that are not ready to get traffic may be included in services and will get traffic and it leads to service disruptions. 
+                                if I don't ave this Readiness probes it hard to tell when the app is ready to get traffic.
+
