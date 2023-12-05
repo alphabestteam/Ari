@@ -1,0 +1,25 @@
+﻿NAMESPACE              NAME                                         READY   STATUS    RESTARTS       AGE     IP             NODE       NOMINATED NODE   READINESS GATES
+default                backend-deployment-77476dfcc9-l2zd4          1/1     Running   1 (21h ago)    21h     10.244.0.64    minikube   <none>           <none>
+default                frontend-deployment-5b94d9c56d-8f6jr         1/1     Running   1 (21h ago)    21h     10.244.0.63    minikube   <none>           <none>
+default                frontend-deployment-5b94d9c56d-98srp         1/1     Running   1 (21h ago)    21h     10.244.0.66    minikube   <none>           <none>
+default                frontend-deployment-5b94d9c56d-p5nv7         1/1     Running   1 (21h ago)    21h     10.244.0.61    minikube   <none>           <none>
+first-namespace        backend-858bf7c76d-xwxn9                     1/1     Running   5 (21h ago)    45h     10.244.0.65    minikube   <none>           <none>
+first-namespace        backend-deployment-6bb9d796c7-c4tpq          1/1     Running   0              3h51m   10.244.0.89    minikube   <none>           <none>
+first-namespace        backend-deployment-6bb9d796c7-jkswr          1/1     Running   0              3h51m   10.244.0.91    minikube   <none>           <none>
+first-namespace        backend-deployment-6bb9d796c7-jztrw          1/1     Running   0              3h51m   10.244.0.90    minikube   <none>           <none>
+first-namespace        front-deployment-5c9bcdf5cb-hw8pn            1/1     Running   3 (21h ago)    21h     10.244.0.70    minikube   <none>           <none>
+first-namespace        front-deployment-5c9bcdf5cb-l4wzx            1/1     Running   3 (21h ago)    21h     10.244.0.75    minikube   <none>           <none>
+first-namespace        front-deployment-5c9bcdf5cb-mpvlb            1/1     Running   3 (21h ago)    21h     10.244.0.60    minikube   <none>           <none>
+first-namespace        frontend-6c6c478b6-txtng                     1/1     Running   5 (21h ago)    45h     10.244.0.74    minikube   <none>           <none>
+first-namespace        frontend-deployment-d7cfc8999-srn5r          1/1     Running   0              3h51m   10.244.0.88    minikube   <none>           <none>
+ingress-nginx          ingress-nginx-controller-7c6974c4d8-772ft    1/1     Running   5 (21h ago)    44h     10.244.0.71    minikube   <none>           <none>
+kube-system            coredns-5dd5756b68-lw7ql                     1/1     Running   6 (21h ago)    2d      10.244.0.77    minikube   <none>           <none>
+kube-system            etcd-minikube                                1/1     Running   7 (21h ago)    2d      192.168.49.2   minikube   <none>           <none>
+kube-system            kube-apiserver-minikube                      1/1     Running   6 (21h ago)    2d      192.168.49.2   minikube   <none>           <none>
+kube-system            kube-controller-manager-minikube             1/1     Running   7 (21h ago)    2d      192.168.49.2   minikube   <none>           <none>
+kube-system            kube-proxy-chczv                             1/1     Running   7 (21h ago)    2d      192.168.49.2   minikube   <none>           <none>
+kube-system            kube-scheduler-minikube                      1/1     Running   7 (21h ago)    2d      192.168.49.2   minikube   <none>           <none>
+kube-system            metrics-server-7c66d45ddc-9zqhz              1/1     Running   0              4h12m   10.244.0.87    minikube   <none>           <none>
+kube-system            storage-provisioner                          1/1     Running   10 (21h ago)   2d      192.168.49.2   minikube   <none>           <none>
+kubernetes-dashboard   dashboard-metrics-scraper-7fd5cb4ddc-m95zx   1/1     Running   5 (21h ago)    47h     10.244.0.67    minikube   <none>           <none>
+kubernetes-dashboard   kubernetes-dashboard-8694d4445c-gxqg8        1/1     Running   8 (21h ago)    47h     10.244.0.69    minikube   <none>           <none>
