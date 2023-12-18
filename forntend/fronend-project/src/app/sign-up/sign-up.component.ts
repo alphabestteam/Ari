@@ -18,12 +18,8 @@ export class SignUpComponent {
 
   onSubmit(): void {
     this.userService.registerUser(this.formData)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => {
-        console.error('Registration failed', error);
-      });
+    this.goToHome()
+   
   }
   goToHome() {
     this.router.navigate(['/home'])
