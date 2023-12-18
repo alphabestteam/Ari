@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .square {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .square h4 {
+            margin-bottom: 10px;
+        }
+
+        .square p {
+            margin-bottom: 5px;
+        }
+
+        .upload-btn {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .upload-btn button {
+            padding: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-4 mb-4 text-center">Items in Our Site</h2>
+
+        <div class="upload-btn ml-auto">
+            <button class="btn btn-primary">Upload Item</button>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of items"  (click)="handleDivClick(item)">
+                <div class="square">
+                
+                    <h4>name: {{ item.item_name }}</h4>
+                    <p>Category: {{ item.item_category }}</p>
+                    <p>City: {{ item.city }}</p>
+                    <p>Description: {{ item.description }}</p>
+                    
+                    <div *ngIf="showDetails && selectedItemId === item.item_id">
+                        <p>Item ID: {{ item.item_id }}</p>
+                        <p>Uploaded By: {{ item.uploaded_by }}</p>
+                        <p>Taken By: {{ item.taken_by }}</p>
+                        <p>Uploaded Date: {{ item.uploaded_date }}</p>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

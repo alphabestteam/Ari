@@ -3,6 +3,9 @@ from rest_framework.decorators import api_view
 from users.serializers import UserSerializers
 from users.models import User
 from rest_framework.response import Response
+from django.http import JsonResponse
+from django.contrib.auth import authenticate, login
+import json
 
 
 @api_view(["POST", "GET"])
@@ -47,3 +50,21 @@ def get_and_delete_specific_user(request, id):
         user = get_object_or_404(User, user_id=id)
         user.delete()
         return Response(f"The user was deleted by the admin {executer}!")
+
+@api_view(['POST'])
+def login(request):
+    method = request.method
+    if method == 'POST':
+        json_data = request.data
+        email = json_data['email']
+        password = json_data['password']
+        full_name = json_data['full_name']
+        if not User.objects.filter(email=email, password=password, full_name=full_name).exists():
+            return Response("The details do not match. If you don't have an account please create a new one")
+        return Response("Login Successful!")
+  
+
+
+
+
+
