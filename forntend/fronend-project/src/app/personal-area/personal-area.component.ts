@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class PersonalAreaComponent {
   name: any
   id : any
-  myItems: any[]= []
+  myItems: any[] = []
+
+  clickedItem: boolean = false;
 
   ngOnInit(): void {
     this.getName()
@@ -33,8 +35,30 @@ export class PersonalAreaComponent {
     );
   }
 
+  handleDivClick(item: any): void {
+    console.log(item)
+  }
+
   getName(): void {
     this.name = sessionStorage.getItem("full_name")
     this.id = sessionStorage.getItem("user_id")
   }
+
+  onDelete(item: any): void {
+    console.log(item.id);
+    this.itemService.deleteItem(item.id).subscribe(
+      () => {
+        console.log('Item deleted successfully');
+      },
+      (error) => {
+        console.log(item.uploaded_by)
+        console.error('Error deleting item', error);
+      }
+    );
+  }
+  onclick(): void {
+    this.router.navigate(['/editItems'])
+
+  }
 }
+

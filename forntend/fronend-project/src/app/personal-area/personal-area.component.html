@@ -31,11 +31,11 @@
 <body>
     <div class="container">
         <h2 class="mt-4 mb-4 text-center">Here are the items '{{name}}' uploaded to our site:</h2>
+
+
         <div class="row">
-            <div class="col-md-4" *ngFor="let item of myItems">
-
+            <div class="col-md-4" *ngFor="let item of myItems" (click)="handleDivClick(item)">
                 <div class="square">
-
                     <h4>name: {{ item.item_name }}</h4>
                     <p>Category: {{ item.item_category }}</p>
                     <p>City: {{ item.city }}</p>
@@ -45,11 +45,13 @@
                     <p>Uploaded By: {{ name }}</p>
                     <p>Taken: {{ item.taken }}</p>
                     <p>Uploaded Date: {{ item.uploaded_date }}</p>
-
+                    <button (click)="onclick()">Edit</button>
+                    <button (click)="onDelete(item)">Delete</button>
                 </div>
-
             </div>
         </div>
+
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

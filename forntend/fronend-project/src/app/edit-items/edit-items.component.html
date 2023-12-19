@@ -1,6 +1,4 @@
 <app-navbar></app-navbar>
-<p>{{id}}</p>
-<p>{{name}}</p>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +12,18 @@
 <body>
 
 <div class="container mt-5">
-  <h2 class="mb-4">Upload Item</h2>
+  <h2 class="mb-4">Edit Your Item</h2>
 
-  <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+  <form #uploadForm="ngForm">
 
     <div class="form-group">
       <label>Item Name:</label>
-      <input type="text" class="form-control" name="item_name" [(ngModel)]="upload.item_name" required>
+      <input type="text" class="form-control" name="item_name" required>
     </div>
 
     <div class="form-group">
         <label for="itemCategory">Item Category:</label>
-        <select class="form-control" id="itemCategory" name="item_category" [(ngModel)]="upload.item_category" required>
+        <select class="form-control" id="itemCategory" name="item_category" required>
           <option value="" disabled selected>Select an item category</option>
           <option value="Home">Home</option>
           <option value="Office">Office</option>
@@ -37,22 +35,22 @@
       
       <div class="form-group">
         <label for="city">City:</label>
-        <input type="text" class="form-control" id="itemcity" name="item_city" [(ngModel)]="upload.city" required>
+        <input type="text" class="form-control" id="itemcity" name="item_city" required>
       </div>  
      
       <div class="form-group">
         <label for="uploadedBy" >Your ID:</label>
-        <input type="text" class="form-control" id="uploadedBy" name="uploaded_by" [(ngModel)]="upload.uploaded_by" required>
+        <input type="text" class="form-control" id="uploadedBy" name="uploaded_by" required>
       </div>
       
       <div class="form-group">
         <label for="phonenumber">Phone Number:</label>
-        <input type="text" class="form-control" id="phonenumber" name="phonenumber" [(ngModel)]="upload.phon_number" required>
+        <input type="text" class="form-control" id="phonenumber" name="phonenumber" required>
       </div>
       
       <div class="form-group">
         <label for="itemDescription">Item Description:</label>
-        <textarea class="form-control" id="itemDescription" name="itemDescription" [(ngModel)]="upload.description" rows="3" required></textarea>
+        <textarea class="form-control" id="itemDescription" name="itemDescription" rows="3" required></textarea>
       </div>
       
     <!-- <div class="form-group">
@@ -60,8 +58,8 @@
       <input type="file" class="form-control-file" id="itemImage" name="itemImage" accept="image/*" required>
     </div> -->
 
-    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
-        <button type="submit" class="btn btn-primary" [disabled]="!uploadForm.form.valid">Submit Item</button>
+    <form (ngSubmit)="onSubmit(item)" #uploadForm="ngForm">
+        <button type="submit" class="btn btn-primary" [disabled]="!uploadForm.form.valid">Update Item</button>
       </form>
         </form>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ItemService } from '../item.service';
+import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 
 
@@ -11,12 +12,16 @@ import { Router } from '@angular/router';
 
 export class ItemsComponent {
   items: any[] = [];
-  selectedItemId: any;
-  showDetails: boolean = false;
+  users: any[] = []
   name: any
 
+  selectedItemId: any;
+  showDetails: boolean = false;
+  
+
   constructor(private itemService: ItemService,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {

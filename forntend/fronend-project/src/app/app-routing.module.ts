@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { TakenItemsComponent } from './taken-items/taken-items.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component'
+import { EditItemsComponent } from './edit-items/edit-items.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'upload-items', component: UploadItemsComponent },
   { path: 'taken-items', component: TakenItemsComponent },
   { path: 'personal-area', component: PersonalAreaComponent },
+  { path: 'editItems', component: EditItemsComponent },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 

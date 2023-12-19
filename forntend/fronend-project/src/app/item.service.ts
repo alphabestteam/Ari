@@ -59,4 +59,16 @@ getPersonalItems(): Observable<any[]> {
     );
   }
 
+// ----------------------------------------   Delete Item   ----------------------------------------------------------
+  deleteItem(id: number): Observable<any> {
+    const url = `${this.apiUrl}items/${id}`;  // adjust the URL based on your API endpoint
+    return this.http.delete(url);
+  }
+
+// ----------------------------------------   Update Item   ----------------------------------------------------------
+updateItems(id: number, updatedData: any): Observable<any> {
+  const url = `${this.apiUrl}items/${id}`; 
+  return this.http.put(url, updatedData);
+  }
 }
+

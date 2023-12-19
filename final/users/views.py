@@ -68,8 +68,6 @@ def login(request):
             'password': user.password,
             'user_id': user.id
         }
-        print(user.id)
-
         return Response({"message": "Login Successful!", "user": user_data, 'user_exist': True})
   
 

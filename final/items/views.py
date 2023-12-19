@@ -25,13 +25,13 @@ def add_and_get_item(request):
 def delete_and_get_item(request, id):
     if request.method == "DELETE":
         executerID = int(request.data.get("ex_id"))
-        item = get_object_or_404(Items, item_id=id)
-        if executerID != item.uploaded_by.user_id:
+        item = get_object_or_404(Items, id=id)
+        if executerID != item.uploaded_by.id:
             return Response("Access denied! don't have permission")
         # print(type(item.uploaded_by.is_admin))
         # if item.uploaded_by.is_admin == True:
         #     return Response("The item was deleted by the admin!")
-        # item.delete()
+        item.delete()
         return Response("The item was deleted by the uploader!")
     
 # The uploader cen get all his items    
@@ -41,15 +41,13 @@ def delete_and_get_item(request, id):
         return Response(serializer.data)
 
 # The uploader cen update his items    
-    if request.method == "PUT":
-        data = request.data 
-        item_id = data["item_id"]
-        item = get_object_or_404(Items, item_id=item_id)
-        item_serialized = ItemSerializers(item, data=data)
-        if item_serialized.is_valid():
-            item_serialized.save()
-            return Response("the item updated!")
-        return Response(item_serialized.errors)
+    if request.method == 'PUT':
+        item = Items.objects.get(pk=id)
+        serializer = ItemSerializers(item, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
     
     
      

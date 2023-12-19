@@ -12,24 +12,22 @@ export class LoginComponent {
 
   formData: any = {}
 
-  constructor (
+  constructor(
     private router: Router,
-    private userService : UserService
-  ) {}
+    private userService: UserService
+  ) { }
 
-  
-  // pay attention the logic here is not correct!!!!!
+
   onSubmit(): void {
-
     this.userService.loginUser(this.formData)
       .then(response => {
         console.log(response);
-        
+
         if (response && response['user_exist']) {
           console.log('Login successful, navigating to home');
           sessionStorage.setItem('full_name', response['user'].full_name)
-          sessionStorage.setItem('user_id', response['user'].user_id)  
-          sessionStorage.setItem('email', response['user'].email)  
+          sessionStorage.setItem('user_id', response['user'].user_id)
+          sessionStorage.setItem('email', response['user'].email)
           this.goToHome();
 
         } else {
@@ -41,12 +39,12 @@ export class LoginComponent {
         console.error('Login failed', error);
       });
   }
-  
-goToSignUp(): void {
-  this.router.navigate(['/signup'])
-}
 
-goToHome() {
-  this.router.navigate(['/home'])
-}
+  goToSignUp(): void {
+    this.router.navigate(['/signup'])
+  }
+
+  goToHome() {
+    this.router.navigate(['/home'])
+  }
 }

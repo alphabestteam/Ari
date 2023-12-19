@@ -48,7 +48,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4" *ngFor="let item of items" (click)="handleDivClick(item)">
+            <div class="col-md-4" *ngFor="let item of items"  (click)="handleDivClick(item)">
 
                 <div class="square" [ngClass]="{'black-background': item === selectedChosenItem}">
                     <h4>name: {{ item.item_name }}</h4>

@@ -15,6 +15,7 @@ import { ItemsComponent } from './items/items.component';
 import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { TakenItemsComponent } from './taken-items/taken-items.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component';
+import { EditItemsComponent } from './edit-items/edit-items.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { PersonalAreaComponent } from './personal-area/personal-area.component';
     UploadItemsComponent,
     TakenItemsComponent,
     PersonalAreaComponent,
+    EditItemsComponent,
   ],
   imports: [
     BrowserModule,

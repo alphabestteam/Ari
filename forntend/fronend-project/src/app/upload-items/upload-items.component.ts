@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../item.service';
 import { Router } from '@angular/router';
 import { NgModel } from '@angular/forms';
@@ -10,17 +10,28 @@ import { NgModel } from '@angular/forms';
 })
 export class UploadItemsComponent {
   upload: any = {}
+  id : any
+  name : any
 
   constructor(private itemService: ItemService,
     private router: Router
     ) {}
+    ngOnInit() {
+      this.getName()
+    }
 
     onSubmit(): void {
       this.itemService.uploadItems(this.upload)
       .then(response => {
         console.log(response);
+        if (response && response['user_exist']) {
+          console.log('Itemsssss')
+          sessionStorage.setItem('full_name', response['user'].full_name)
+          sessionStorage.setItem('user_id', response['user'].user_id)
+          sessionStorage.setItem('email', response['user'].email)
         alert("Item added successfully")
         this.goToHome()
+        }
       })
       .catch(error => {
         console.error('Upload failed', error);
@@ -29,6 +40,11 @@ export class UploadItemsComponent {
     }
     goToHome() : void {
       this.router.navigate(['/home'])
+    }
+
+    getName(): void{
+      this.name = sessionStorage.getItem("full_name")
+      this.id = sessionStorage.getItem("user_id")
     }
 
 }
