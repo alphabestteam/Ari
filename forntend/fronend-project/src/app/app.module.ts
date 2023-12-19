@@ -12,6 +12,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ItemsComponent } from './items/items.component';
+import { UploadItemsComponent } from './upload-items/upload-items.component';
+import { TakenItemsComponent } from './taken-items/taken-items.component';
+import { PersonalAreaComponent } from './personal-area/personal-area.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { ItemsComponent } from './items/items.component';
     NavbarComponent,
     FooterComponent,
     ItemsComponent,
+    UploadItemsComponent,
+    TakenItemsComponent,
+    PersonalAreaComponent,
   ],
   imports: [
     BrowserModule,

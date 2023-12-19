@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Upload</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="mb-4">Upload Item</h2>
+
+  <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+
+    <div class="form-group">
+      <label>Item Name:</label>
+      <input type="text" class="form-control" name="item_name" [(ngModel)]="upload.item_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="itemCategory">Item Category:</label>
+        <select class="form-control" id="itemCategory" name="item_category" [(ngModel)]="upload.item_category" required>
+          <option value="" disabled selected>Select an item category</option>
+          <option value="Home">Home</option>
+          <option value="Office">Office</option>
+          <option value="Work Tools">Work Tools</option>
+          <option value="General">General</option>
+          <option value="Else">Else</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="itemcity" name="item_city" [(ngModel)]="upload.city" required>
+      </div>  
+     
+      <div class="form-group">
+        <label for="uploadedBy">Your ID:</label>
+        <input type="text" class="form-control" id="uploadedBy" name="uploaded_by" [(ngModel)]="upload.uploaded_by" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phonenumber">Phone Number:</label>
+        <input type="text" class="form-control" id="phonenumber" name="phonenumber" [(ngModel)]="upload.phon_number" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="itemDescription">Item Description:</label>
+        <textarea class="form-control" id="itemDescription" name="itemDescription" [(ngModel)]="upload.description" rows="3" required></textarea>
+      </div>
+      
+    <!-- <div class="form-group">
+      <label for="itemImage">Upload Image Of Your Item:</label>
+      <input type="file" class="form-control-file" id="itemImage" name="itemImage" accept="image/*" required>
+    </div> -->
+
+    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+        <button type="submit" class="btn btn-primary" [disabled]="!uploadForm.form.valid">Submit Item</button>
+      </form>
+        </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+<app-footer></app-footer>

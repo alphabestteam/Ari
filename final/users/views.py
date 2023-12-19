@@ -53,15 +53,24 @@ def get_and_delete_specific_user(request, id):
 
 @api_view(['POST'])
 def login(request):
-    method = request.method
-    if method == 'POST':
         json_data = request.data
-        email = json_data['email']
-        password = json_data['password']
-        full_name = json_data['full_name']
-        if not User.objects.filter(email=email, password=password, full_name=full_name).exists():
-            return Response("The details do not match. If you don't have an account please create a new one")
-        return Response("Login Successful!")
+        email = json_data.get('email')
+        password = json_data.get('password')
+     
+        user = User.objects.filter(email=email, password=password).first()
+
+        if user is None:
+            return Response("The details do not match. If you don't have an account, please create a new one")
+    
+        user_data = {
+            'email': user.email,
+            'full_name': user.full_name,
+            'password': user.password,
+            'user_id': user.id
+        }
+        print(user.id)
+
+        return Response({"message": "Login Successful!", "user": user_data, 'user_exist': True})
   
 
 

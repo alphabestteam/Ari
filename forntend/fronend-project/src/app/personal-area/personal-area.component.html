@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal area</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+        .square {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .square h4 {
+            margin-bottom: 10px;
+        }
+
+        .square p {
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-4 mb-4 text-center">Here are the items '{{name}}' uploaded to our site:</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of myItems">
+
+                <div class="square">
+
+                    <h4>name: {{ item.item_name }}</h4>
+                    <p>Category: {{ item.item_category }}</p>
+                    <p>City: {{ item.city }}</p>
+                    <p>Description: {{ item.description }}</p>
+                    <p>Item ID: {{ item.id }}</p>
+                    <p>Phone Number: {{ item.phon_number}}</p>
+                    <p>Uploaded By: {{ name }}</p>
+                    <p>Taken: {{ item.taken }}</p>
+                    <p>Uploaded Date: {{ item.uploaded_date }}</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<app-footer></app-footer>

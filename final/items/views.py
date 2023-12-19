@@ -16,12 +16,12 @@ def add_and_get_item(request):
         return Response(data_deserialized.errors)
     
     if request.method == "GET":
-        user = Items.objects.all()
-        user_serialized = ItemSerializers(user, many=True)
-        return Response(user_serialized.data)
+        item = Items.objects.all()
+        item_serialized = ItemSerializers(item, many=True)
+        return Response(item_serialized.data)
     
 # only the uploader can delete the item   
-@api_view(["DELETE", "GET"])
+@api_view(["DELETE", "GET", "PUT"])
 def delete_and_get_item(request, id):
     if request.method == "DELETE":
         executerID = int(request.data.get("ex_id"))
@@ -39,6 +39,17 @@ def delete_and_get_item(request, id):
         user_items = Items.objects.filter(uploaded_by=id)
         serializer = ItemSerializers(user_items, many=True)
         return Response(serializer.data)
+
+# The uploader cen update his items    
+    if request.method == "PUT":
+        data = request.data 
+        item_id = data["item_id"]
+        item = get_object_or_404(Items, item_id=item_id)
+        item_serialized = ItemSerializers(item, data=data)
+        if item_serialized.is_valid():
+            item_serialized.save()
+            return Response("the item updated!")
+        return Response(item_serialized.errors)
     
     
      
