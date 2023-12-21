@@ -6,5 +6,5 @@ class UserSerializers(serializers.ModelSerializer):
     password = serializers.CharField()
     class Meta: 
         model = User
-        fields = ['id', 'email', 'full_name', 'password']
+        fields = ['id', 'email', 'full_name', 'password', 'is_admin']
 

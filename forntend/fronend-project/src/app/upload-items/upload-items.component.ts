@@ -21,17 +21,17 @@ export class UploadItemsComponent {
     }
 
     onSubmit(): void {
+      this.upload.uploaded_by=this.id
       this.itemService.uploadItems(this.upload)
       .then(response => {
         console.log(response);
         if (response && response['user_exist']) {
-          console.log('Itemsssss')
           sessionStorage.setItem('full_name', response['user'].full_name)
           sessionStorage.setItem('user_id', response['user'].user_id)
           sessionStorage.setItem('email', response['user'].email)
+        }
         alert("Item added successfully")
         this.goToHome()
-        }
       })
       .catch(error => {
         console.error('Upload failed', error);

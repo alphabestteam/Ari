@@ -20,10 +20,10 @@ def create_and_get_users(request):
 
     # only users with admin permission can get the users
     if request.method == "GET":
-        executerID = request.data["ex_id"]
-        executer = get_object_or_404(User, user_id=executerID)
-        if executer.is_admin != True:
-            return Response("Access denied! You don't have permission")
+        # executerID = request.data["ex_id"]
+        # executer = get_object_or_404(User, id=executerID)
+        # if executer.is_admin != True:
+        #     return Response("Access denied! You don't have permission")
         user = User.objects.all()
         user_serialized = UserSerializers(user, many=True)
         return Response(user_serialized.data)
@@ -34,22 +34,22 @@ def create_and_get_users(request):
 def get_and_delete_specific_user(request, id):
     if request.method == "GET":
         executerID = request.data["ex_id"]
-        executer = get_object_or_404(User, user_id=executerID)
+        executer = get_object_or_404(User, id=executerID)
         if executer.is_admin != True:
             return Response("Access denied! You don't have permission")
-        user = get_object_or_404(User, user_id=id)
+        user = get_object_or_404(User, id=id)
         user_serialized = UserSerializers(user)
         return Response(user_serialized.data)
 
     # only users with admin permission can delete a user
     if request.method == "DELETE":
-        executerID = request.data["ex_id"]
-        executer = get_object_or_404(User, user_id=executerID)
-        if executer.is_admin != True:
-            return Response("Access denied! You don't have permission")
-        user = get_object_or_404(User, user_id=id)
+        # executerID = request.data["ex_id"]
+        # executer = get_object_or_404(User, id=executerID)
+        # if executer.is_admin != True:
+        #     return Response("Access denied! You don't have permission")
+        user = get_object_or_404(User, id=id)
         user.delete()
-        return Response(f"The user was deleted by the admin {executer}!")
+        return Response(f"The user was deleted by the admin!")
 
 @api_view(['POST'])
 def login(request):
@@ -66,7 +66,8 @@ def login(request):
             'email': user.email,
             'full_name': user.full_name,
             'password': user.password,
-            'user_id': user.id
+            'user_id': user.id,
+            'admin': user.is_admin
         }
         return Response({"message": "Login Successful!", "user": user_data, 'user_exist': True})
   

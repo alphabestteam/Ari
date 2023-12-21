@@ -14,7 +14,8 @@ def add_and_get_item(request):
             data_deserialized.save()
             return Response("The item was added successfully!")
         return Response(data_deserialized.errors)
-    
+        
+        
     if request.method == "GET":
         item = Items.objects.all()
         item_serialized = ItemSerializers(item, many=True)
@@ -24,10 +25,10 @@ def add_and_get_item(request):
 @api_view(["DELETE", "GET", "PUT"])
 def delete_and_get_item(request, id):
     if request.method == "DELETE":
-        executerID = int(request.data.get("ex_id"))
+        # executerID = int(request.data.get("ex_id"))
         item = get_object_or_404(Items, id=id)
-        if executerID != item.uploaded_by.id:
-            return Response("Access denied! don't have permission")
+        # if executerID != item.uploaded_by.id:
+        #     return Response("Access denied! don't have permission")
         # print(type(item.uploaded_by.is_admin))
         # if item.uploaded_by.is_admin == True:
         #     return Response("The item was deleted by the admin!")

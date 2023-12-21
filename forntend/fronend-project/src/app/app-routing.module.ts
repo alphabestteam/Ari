@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'upload-items', component: UploadItemsComponent },
   { path: 'taken-items', component: TakenItemsComponent },
   { path: 'personal-area', component: PersonalAreaComponent },
-  { path: 'editItems', component: EditItemsComponent },
+  { path: 'editItems/:id', component: EditItemsComponent },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 

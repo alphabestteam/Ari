@@ -28,8 +28,8 @@ export class LoginComponent {
           sessionStorage.setItem('full_name', response['user'].full_name)
           sessionStorage.setItem('user_id', response['user'].user_id)
           sessionStorage.setItem('email', response['user'].email)
+          sessionStorage.setItem('admin', response['user'].admin)
           this.goToHome();
-
         } else {
           alert(response)
           this.goToSignUp();
