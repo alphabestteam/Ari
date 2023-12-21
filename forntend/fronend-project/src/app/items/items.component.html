@@ -11,13 +11,17 @@
 
 <body>
 <!-- massage for admin  -->
-    <div *ngIf="admin === 'true'">
+    <div class="text-center" *ngIf="admin === 'true'">
         <h3>{{ name }}, You are an admin!</h3>
     </div>
 
 <!-- our items  -->
     <div class="row">
-        <h2 class="my-4 text-center display-4">Explore Our Items</h2>
+        <div class="container text-center my-4">
+            <h2 class="display-4 font-weight-bold">Discover Our Collection</h2>
+            <p class="lead">Explore the available items for borrowing.</p>
+          </div>
+          
 
         <div class="upload-btn ml-auto">
             <button type="button" class="btn btn-primary" (click)="goToUpload()">
@@ -54,7 +58,11 @@
                               {{ showDetails ? 'Hide Details' : 'Show Details' }}
                             </button>
                           </div>
-                                                       
+
+                          <!-- <h1>file </h1>
+                          <input type="file" (change)="onFileSelected($event)">
+                          <button type="button" (click)="onUpload()">Upload</button>
+                                                        -->
                     </div>
                 </div>
             </div>
@@ -63,13 +71,16 @@
 
 <!-- items in use -->
     <div class="row">
-        <h2 class="my-4 text-center display-4">Items In Use</h2>
+        <div class="container text-center my-4">
+            <h2 class="display-4 font-weight-bold">Currently in Use</h2>
+            <p class="lead">Discover the items that are actively being borrowed so you can catch them in time next time.</p>
+        </div>
         <div class="row">
             <div class="col-md-4 mb-3" *ngFor="let takenItem of takenItems">   
                 <div class="card">
                     <div class="card-body bg-dark text-white" [ngClass]="{'text-bold': takenItem === selectedChosenItem}">
 
-                        <div [style.color]="'red'" [style.font-size]="'1.5em'">
+                        <div class="text-center" [style.color]="'red'" [style.font-size]="'1.5em'">
                             <span *ngIf="takenItem.taken"> In use! </span>
                           </div>
 

@@ -31,7 +31,7 @@
   <div class="container mt-3">
     <h2 class="mb-4">Upload Item</h2>
 
-    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm" enctype="multipart/form-data">
 
       <div class="form-group">
         <label for="itemName">Item Name:</label>
@@ -48,7 +48,11 @@
           <option value="General">General</option>
           <option value="Else">Else</option>
         </select>
-      </div>
+
+        <input *ngIf="upload.item_category === 'Else'" type="text" class="form-control" id="customCategory" name="custom_category" [(ngModel)]="upload.custom_category" placeholder="Enter custom category">
+  </div>
+
+  
 
       <div class="form-group">
         <label for="itemCity">City:</label>

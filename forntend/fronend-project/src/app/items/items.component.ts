@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ItemService } from '../item.service'
 import { Router } from '@angular/router';
+import { HttpClient, HttpEventType } from '@angular/common/http';
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -17,7 +18,7 @@ export class ItemsComponent {
   selectedItemId: any;
   showDetails: boolean = false;
   
-  constructor(private itemService: ItemService, private router: Router,) { } 
+  constructor(private itemService: ItemService, private router: Router, private http:HttpClient ) { } 
 
   ngOnInit(): void {
     this.fetchItems();
@@ -71,4 +72,19 @@ export class ItemsComponent {
     this.name = sessionStorage.getItem("full_name")
     this.admin = sessionStorage.getItem("admin")
   }
-}
+  // selectedFile : File  = null;
+  // onFileSelected(event: any) {
+  // this.selectedFile = <File>event.target.files[0]
+ }
+  // onUpload() {
+  //   const fd = new FormData();
+  //   fd.append('image', this.selectedFile, this.selectedFile.name)
+  //     this.http.post('', fd, {
+  //       reportProgress: true,
+  //       observe: 'events' 
+  //     })
+  //     .subscribe(event => {
+  //       console.log(event);
+  //     });
+  // }
+// }

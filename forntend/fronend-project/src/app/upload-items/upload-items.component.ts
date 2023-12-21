@@ -38,6 +38,7 @@ export class UploadItemsComponent {
       });
 
     }
+  
     goToHome() : void {
       this.router.navigate(['/home'])
     }
