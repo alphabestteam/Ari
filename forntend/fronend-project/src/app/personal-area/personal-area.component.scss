@@ -12,3 +12,28 @@
 .square p {
     margin-bottom: 5px;
 }
+.card {
+    transition: transform 0.3s ease; 
+}
+
+.card:hover {
+    font-weight: bold;
+
+    transform: translateY(-5px); 
+}
+
+.card.hovered {
+    transform: translateY(-5px); 
+}
+
+.btn-custom {
+    background-color: #007bff; 
+    color: #fff;
+    border: 1px solid #007bff; 
+    transition: transform 0.3s ease; 
+}
+
+.btn-custom:hover {
+    background-color: #0056b3; 
+    transform: translateY(-5px); 
+}

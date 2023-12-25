@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, tap } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { FileUploader, FileItem } from 'ng2-file-upload';
 
 
 @Injectable({
@@ -13,8 +13,14 @@ export class ItemService {
 
   private apiUrl = "http://127.0.0.1:8000/api/";
   private items: any[] = [];
+  public uploader: FileUploader = new FileUploader({ url: 'http://127.0.0.1:8000/api/add_and_get_item/' });
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.uploader.onCompleteItem = (item: FileItem, response: string, status: number) => {
+      console.log('ImageUpload:uploaded:', item, status, response);
+    };
+
+   }
 
   // ----------------------------------------    Get Items     ----------------------------------------------------------
   getItems(): Observable<any[]> {
@@ -41,24 +47,8 @@ export class ItemService {
   }
 
   // ----------------------------------------   Upload Items    ----------------------------------------------------------
-  uploadItems(itemsData: any): Promise<any> {
-    return fetch(`${this.apiUrl}items`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(itemsData),
-    })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-      });
-
+  uploadItems(itemsData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}items`, itemsData);
   }
 
   // ----------------------------------------   Get Personal Items    ----------------------------------------------------------

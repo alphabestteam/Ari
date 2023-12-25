@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ItemService } from './item.service';
+import { FileUploadModule } from 'ng2-file-upload';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +19,8 @@ import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { TakenItemsComponent } from './taken-items/taken-items.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component';
 import { EditItemsComponent } from './edit-items/edit-items.component';
+import { AboutComponent } from './about/about.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +35,16 @@ import { EditItemsComponent } from './edit-items/edit-items.component';
     TakenItemsComponent,
     PersonalAreaComponent,
     EditItemsComponent,
+    AboutComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule,
+    BrowserAnimationsModule
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]

@@ -17,22 +17,21 @@ export class LoginComponent {
     private userService: UserService
   ) { }
 
-
   onSubmit(): void {
     this.userService.loginUser(this.formData)
       .then(response => {
         console.log(response);
-
         if (response && response['user_exist']) {
-          console.log('Login successful, navigating to home');
           sessionStorage.setItem('full_name', response['user'].full_name)
           sessionStorage.setItem('user_id', response['user'].user_id)
           sessionStorage.setItem('email', response['user'].email)
           sessionStorage.setItem('admin', response['user'].admin)
           this.goToHome();
+               
         } else {
-          alert(response)
-          this.goToSignUp();
+          if(confirm("Don't have an account, want to create a new account?")){
+            this.goToSignUp();
+          }
         }
       })
       .catch(error => {
@@ -45,6 +44,6 @@ export class LoginComponent {
   }
 
   goToHome() {
-    this.router.navigate(['/home'])
+    this.router.navigate(['/welcome'])
   }
 }

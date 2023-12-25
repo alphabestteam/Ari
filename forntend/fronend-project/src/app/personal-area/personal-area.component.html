@@ -22,7 +22,6 @@
                     <div class="card-body bg-dark text-white">
                         <h4 class="card-title">User Name: {{ user.full_name }}</h4>
                         <p class="card-text">User Email: {{ user.email }}</p>
-                        <p class="card-text">User Password: {{ user.password }}</p>
                         <p class="card-text">Admin status: {{ user.is_admin }}</p>
                         <p class="card-text">The user ID: {{ user.id}}</p>
                         <button class="btn btn-danger" (click)="onDeleteUser(user)">
@@ -37,7 +36,7 @@
                 <h3><b>'{{ name }}'</b>, As an admin you can see/delete all the items on our site:</h3>
             </div>
             <div class="row">
-                <div class="col-md-3 mb-3" *ngFor="let item of items">
+                <div class="col-md-4 mb-3" *ngFor="let item of items">
                     <div class="card">
                         <div class="card-body bg-dark text-white">
                             <div [style.color]="'red'" [style.font-size]="'1.5em'">
@@ -72,14 +71,14 @@
                 <img src="https://media3.giphy.com/media/3fmRTfVIKMRiM/200w.gif?cid=6c09b952ybecqr01ywb55jw9hajliomjou2djudv9lqycpov&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="Crying Emoji">
             </div>
 
-            <h3 class="my-4 text-center"> {{name}} Still no uploaded items to our site</h3>
+            <h3 class="my-4 text-center"> {{name}} has not uploaded any items to our site yet!</h3>
         </div>
 
         <div class="row">
             <div class="col-md-4" *ngFor="let item of myItems" (click)="handleDivClick(item)">
                 <div class="card">
                     <div class="card-body bg-dark text-white">
-                        <h4 class="card-title">name: {{ item.item_name }}</h4>
+                        <h4 class="card-title">Item name: {{ item.item_name }}</h4>
                         <p>Category: {{ item.item_category }}</p>
                         <p>City: {{ item.city }}</p>
                         <p>Description: {{ item.description }}</p>
@@ -88,6 +87,8 @@
                         <p>Uploaded By: {{ item.uploaded_by }}</p>
                         <p>Uploaded Date: {{ item.uploaded_date }}</p>
                         <p>Item Taken: {{ item.taken }}</p>
+                        <!-- <p>Taken By: {{ item.taken_by }}</p> -->
+                        <!-- <p>Taken Phone: {{ item.taken_phone }}</p> -->
 
                         <div class="mb-3">
                             <button type="button" class="btn btn-primary me-2" (click)="onclick(item.id)">

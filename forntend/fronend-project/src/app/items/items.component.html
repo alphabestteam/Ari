@@ -10,12 +10,11 @@
 </head>
 
 <body>
-<!-- massage for admin  -->
+
     <div class="text-center" *ngIf="admin === 'true'">
         <h3>{{ name }}, You are an admin!</h3>
     </div>
 
-<!-- our items  -->
     <div class="row">
         <div class="container text-center my-4">
             <h2 class="display-4 font-weight-bold">Discover Our Collection</h2>
@@ -23,11 +22,12 @@
           </div>
           
 
-        <div class="upload-btn ml-auto">
-            <button type="button" class="btn btn-primary" (click)="goToUpload()">
+          <div class="upload-btn ml-auto">
+            <button type="button" class="btn btn-custom" (click)="goToUpload()">
                 <i class="bi bi-upload"></i> Upload Item
             </button>
         </div>
+        
 
         <div class="row">
             <div class="col-md-4 mb-3" *ngFor="let item of items">   
@@ -38,7 +38,7 @@
                             <span *ngIf="item.taken"> In use! </span>
                           </div>
 
-                        <h4>name: {{ item.item_name }}</h4>
+                        <h4>Item name: {{ item.item_name }}</h4>
                         <p>Category: {{ item.item_category }}</p>
                         <p>City: {{ item.city }}</p>
                         <p>Description: {{ item.description }}</p>
@@ -61,15 +61,13 @@
 
                           <!-- <h1>file </h1>
                           <input type="file" (change)="onFileSelected($event)">
-                          <button type="button" (click)="onUpload()">Upload</button>
-                                                        -->
+                          <button type="button" (click)="onUpload()">Upload</button> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- items in use -->
     <div class="row">
         <div class="container text-center my-4">
             <h2 class="display-4 font-weight-bold">Currently in Use</h2>
@@ -84,7 +82,7 @@
                             <span *ngIf="takenItem.taken"> In use! </span>
                           </div>
 
-                        <h4>name: {{ takenItem.item_name }}</h4>
+                        <h4>Item name: {{ takenItem.item_name }}</h4>
                         <p>Category: {{ takenItem.item_category }}</p>
                         <p>City: {{ takenItem.city }}</p>
                         <p>Description: {{ takenItem.description }}</p>
@@ -99,7 +97,8 @@
                 </div>
             </div>
         </div>
- 
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>

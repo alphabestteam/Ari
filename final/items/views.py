@@ -8,8 +8,14 @@ from rest_framework.response import Response
 def add_and_get_item(request):
 
     if request.method == "POST":
-        object_data = request.data
+        object_data = request.data.copy()  
+        image_file = request.FILES.get('image', None)
+
+        if image_file:
+            object_data['image'] = image_file
+
         data_deserialized = ItemSerializers(data=object_data)
+
         if data_deserialized.is_valid():
             data_deserialized.save()
             return Response("The item was added successfully!")

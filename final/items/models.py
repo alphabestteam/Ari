@@ -11,6 +11,8 @@ class Items(models.Model):
     description = models.CharField(max_length=70)
     phon_number = models.IntegerField(max_length=9)
     image = models.ImageField(null=True, blank=True, upload_to="images/ ")
+    taken_by = models.CharField(null=True, blank=True, max_length=15)
+    taken_phone = models.IntegerField(null=True, blank=True)
     
     def __str__(self):
         return str(self.uploaded_by)

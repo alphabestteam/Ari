@@ -7,16 +7,19 @@ import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { TakenItemsComponent } from './taken-items/taken-items.component';
 import { PersonalAreaComponent } from './personal-area/personal-area.component'
 import { EditItemsComponent } from './edit-items/edit-items.component'
+import { WelcomeComponent } from './welcome/welcome.component'
+import { authGuard } from './auth.guard';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignUpComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'upload-items', component: UploadItemsComponent },
-  { path: 'taken-items', component: TakenItemsComponent },
-  { path: 'personal-area', component: PersonalAreaComponent },
-  { path: 'editItems/:id', component: EditItemsComponent },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard]},
+  { path: 'upload-items', component: UploadItemsComponent, canActivate: [authGuard]},
+  { path: 'taken-items', component: TakenItemsComponent, canActivate: [authGuard]},
+  { path: 'personal-area', component: PersonalAreaComponent, canActivate: [authGuard]},
+  { path: 'editItems/:id', component: EditItemsComponent, canActivate: [authGuard]},
+  { path: 'welcome', component: WelcomeComponent, canActivate: [authGuard]},
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];
 

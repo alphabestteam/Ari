@@ -55,6 +55,16 @@
         <input class="form-control" id="taken" name="taken" rows="3" [(ngModel)]="updatedItem.taken" required name = "name">
       </div>
 
+      <!-- <div class="form-group">
+        <label for="taken">Taken By:</label>
+        <input class="form-control" id="taken" name="taken" rows="3"  [(ngModel)]="updatedItem.taken_by" required name = "name">
+      </div>
+
+      <div class="form-group">
+        <label for="taken">Taken's Pone:</label>
+        <input class="form-control" id="taken" name="taken" rows="3"  [(ngModel)]="updatedItem.taken_phone" required name = "name">
+      </div> -->
+
     <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
         <button type="submit" class="btn btn-primary" [disabled]="!uploadForm.form.valid"><i class="bi bi-arrow-clockwise"></i>Update Item</button>
       </form>

@@ -12,31 +12,32 @@ export class UploadItemsComponent {
   upload: any = {}
   id : any
   name : any
+  ItemService: any;
 
-  constructor(private itemService: ItemService,
-    private router: Router
-    ) {}
+  constructor(private itemService: ItemService, private router: Router) {}
+
     ngOnInit() {
       this.getName()
     }
 
     onSubmit(): void {
-      this.upload.uploaded_by=this.id
+      this.upload.uploaded_by = this.id;
       this.itemService.uploadItems(this.upload)
-      .then(response => {
-        console.log(response);
-        if (response && response['user_exist']) {
-          sessionStorage.setItem('full_name', response['user'].full_name)
-          sessionStorage.setItem('user_id', response['user'].user_id)
-          sessionStorage.setItem('email', response['user'].email)
-        }
-        alert("Item added successfully")
-        this.goToHome()
-      })
-      .catch(error => {
-        console.error('Upload failed', error);
-      });
-
+        .subscribe(
+          response => {
+            console.log(response);
+            if (response && response['user_exist']) {
+              sessionStorage.setItem('full_name', response['user'].full_name);
+              sessionStorage.setItem('user_id', response['user'].user_id);
+              sessionStorage.setItem('email', response['user'].email);
+            }
+            alert('Item added successfully');
+            this.goToHome();
+          },
+          error => {
+            console.error('Upload failed', error);
+          }
+        );
     }
   
     goToHome() : void {
@@ -47,5 +48,5 @@ export class UploadItemsComponent {
       this.name = sessionStorage.getItem("full_name")
       this.id = sessionStorage.getItem("user_id")
     }
-
+   
 }
