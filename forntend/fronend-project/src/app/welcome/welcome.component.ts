@@ -1,29 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
 import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss'],
-  animations: [
-    trigger('dropIn', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-50px)' }),
-        animate('1s ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
-      ]),
-    ]),
-  ],
-
+  styleUrls: ['./welcome.component.scss']
 })
+
 export class WelcomeComponent implements OnInit {
   name: any
+  greetingMessage: string = ''
   constructor(private router: Router,) { }
-
+  
   ngOnInit(): void {
-    this.getName()
+  this.getName()
+  this.updateGreeting()
   }
+
   getName(): void {
     this.name = sessionStorage.getItem("full_name")
   }
@@ -31,4 +25,18 @@ export class WelcomeComponent implements OnInit {
   goToHome(): void {
     this.router.navigate(['/home'])
   }
+
+  updateGreeting() {
+    const currentHour = new Date().getHours();
+
+    if (currentHour >= 0 && currentHour < 12) {
+      this.greetingMessage = "Good Morning";
+    } else if (currentHour >= 12 && currentHour < 18) {
+      this.greetingMessage = "Good Afternoon";
+    } else {
+      this.greetingMessage = "Good Evening";
+    }
+  }
 }
+
+

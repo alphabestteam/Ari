@@ -27,6 +27,17 @@
                 <i class="bi bi-upload"></i> Upload Item
             </button>
         </div>
+
+        <!-- <div class="form-group">
+            <label for="itemCategory">Item Category:</label>
+            <select class="form-control" id="itemCategory" name="item_category">
+              <option value="" disabled selected>Select an item category</option>
+              <option value="Home">Home</option>
+              <option value="Office">Office</option>
+              <option value="Work Tools">Work Tools</option>
+              <option value="Else">Else</option>
+            </select>
+        </div> -->
         
 
         <div class="row">
@@ -53,11 +64,17 @@
                         </div>
 
                         <div class="form-check mt-3">
-                            <button type="button" class="btn" [ngClass]="{'btn-success': !showDetails, 'btn-danger': showDetails}" (click)="handleDivClick(item)">
-                              <i class="bi" [ngClass]="{'bi-box-arrow-in-down': !showDetails, 'bi-box-arrow-in-up': showDetails}"></i> 
-                              {{ showDetails ? 'Hide Details' : 'Show Details' }}
+                            <button
+                              type="button"
+                              class="btn btn-custom"
+                              [ngClass]="{'btn-success': selectedItemId === item.id && !showDetails, 'btn-danger': selectedItemId === item.id && showDetails}"
+                              (click)="handleDivClick(item)"
+                            >
+                              <i class="bi" [ngClass]="{'bi-box-arrow-in-down': selectedItemId === item.id && !showDetails, 'bi-box-arrow-in-up': selectedItemId === item.id && showDetails}"></i>
+                              <span>{{ showDetails && selectedItemId === item.id ? 'Hide Details' : 'Show Details' }}</span>
                             </button>
                           </div>
+                          
 
                           <!-- <h1>file </h1>
                           <input type="file" (change)="onFileSelected($event)">

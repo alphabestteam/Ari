@@ -91,7 +91,7 @@ export class ItemService {
   }
 
   // ----------------------------------------   Update Item   ----------------------------------------------------------
-  updateItems(id: number, updatedItem: any): Observable<any> {
+  updateItems(id: number , updatedItem: any): Observable<any> {
     const url = `${this.apiUrl}items/${id}`;
     return this.http.put(url, updatedItem);
   }

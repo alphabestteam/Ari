@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'upload-items', component: UploadItemsComponent, canActivate: [authGuard]},
   { path: 'taken-items', component: TakenItemsComponent, canActivate: [authGuard]},
   { path: 'personal-area', component: PersonalAreaComponent, canActivate: [authGuard]},
-  { path: 'editItems/:id', component: EditItemsComponent, canActivate: [authGuard]},
+  { path: 'editItems/:id/:item_name/:city', component: EditItemsComponent, canActivate: [authGuard]},
   { path: 'welcome', component: WelcomeComponent, canActivate: [authGuard]},
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
 ];

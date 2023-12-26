@@ -54,6 +54,7 @@ export class PersonalAreaComponent {
     );
   }
 
+  
   fetchPersonalItems(): void {
     this.itemService.getPersonalItems().subscribe(
       (data: any[]) => {
@@ -65,7 +66,6 @@ export class PersonalAreaComponent {
       }
     );
   }
-
   handleDivClick(item: any): void {
     console.log(item)
   }
@@ -101,8 +101,8 @@ export class PersonalAreaComponent {
     );
   }
 
-  onclick(itemId: any): void {
-    this.router.navigate(['/editItems', itemId])
+  onclick(itemId: any, itemName: any, city:any): void {
+    this.router.navigate(['/editItems', itemId, itemName, city])
   }
 
   onDeleteUser(user: any): void {

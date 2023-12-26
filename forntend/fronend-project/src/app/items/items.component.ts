@@ -11,7 +11,13 @@ import { HttpClient, HttpEventType } from '@angular/common/http';
 export class ItemsComponent {
   items: any[] = [];
   takenItems: any[] = [];
-
+  // filterItems: any [] = []
+  // homeCategory :any [] = []
+  // workToolsCategory:any [] = []
+  // officeCategory:any [] = []
+  // generalCategory: any[] = []
+  // elseCategory:any [] = []
+  
   name: any
   admin : any
 
@@ -24,13 +30,14 @@ export class ItemsComponent {
     this.fetchItems();
     this.fetchTakenItems();
     this.getName()
+    // this.filterItems = this.items
   }
 
   fetchItems(): void {
     this.itemService.getItems().subscribe(
       (data: any[]) => {
         this.items = data
-          .filter(item => !item.taken)  
+          .filter(item => !item.taken)   
           .map((item) => ({ ...item, clicked: false }));
       },
       (error) => {
@@ -38,6 +45,19 @@ export class ItemsComponent {
       }
     );
   }
+
+  // homeItems(): void {
+  //   this.itemService.getItems().subscribe(
+  //     (data: any[]) => {
+  //       this.filterItems = data
+  //         .filter(item => item.item_category == "Home")   
+  //         .map((item) => ({ ...item, clicked: false }));
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching items:', error);
+  //     }
+  //   );
+  // }
   
 
   fetchTakenItems(): void {
@@ -52,8 +72,8 @@ export class ItemsComponent {
   }
 
   handleDivClick(item: any): void {
-    this.selectedItemId = item.id;
-    this.showDetails = !this.showDetails;
+    this.selectedItemId = this.selectedItemId === item.id ? null : item.id;
+    this.showDetails = this.selectedItemId !== null;
   }
   
   itemChosen = false

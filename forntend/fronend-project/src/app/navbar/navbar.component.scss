@@ -1,3 +1,27 @@
 .nav-item:hover a {
-    transform: scale(1.1); 
-  }
+  transform: scale(1.1);
+}
+
+.logo-container {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.black-background {
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.yellow-background {
+  background-color: gold;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
