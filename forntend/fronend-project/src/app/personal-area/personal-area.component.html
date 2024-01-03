@@ -14,13 +14,13 @@
 <body>
     <div *ngIf="admin === 'true'">
         <div class="row">
-            <div class="text-center">
+            <div class="admin text-center">
                 <h3><b>'{{ name }}'</b>, As an admin you can see/delete all the users on our site:</h3>
             </div>
             <div class="col-md-4 mb-3" *ngFor="let user of users">
                 <div class="card">
-                    <div class="card-body bg-dark text-white">
-                        <h4 class="card-title">User Name: {{ user.full_name }}</h4>
+                    <div class="card-body transparent-bg">
+                        <div class="item-title"><h4 class="card-title">User Name: {{ user.full_name }}</h4></div>
                         <p class="card-text">User Email: {{ user.email }}</p>
                         <p class="card-text">Admin status: {{ user.is_admin }}</p>
                         <p class="card-text">The user ID: {{ user.id}}</p>
@@ -32,17 +32,17 @@
         </div>
 
         <div class="row">
-            <div class="text-center">
+            <div class=" admin text-center">
                 <h3><b>'{{ name }}'</b>, As an admin you can see/delete all the items on our site:</h3>
             </div>
             <div class="row">
                 <div class="col-md-4 mb-3" *ngFor="let item of items">
                     <div class="card">
-                        <div class="card-body bg-dark text-white">
+                        <div class="card-body transparent-bg">
                             <div [style.color]="'red'" [style.font-size]="'1.5em'">
                                 <span *ngIf="item.taken"> In use! </span>
                             </div>
-                            <h4>Item name: {{ item.item_name }}</h4>
+                            <div class="item-title"><h4>Item name: {{ item.item_name }}</h4></div>
                             <p><strong>Category:</strong> {{ item.item_category }}</p>
                             <p><strong>City:</strong> {{ item.city }}</p>
                             <p><strong>Description: </strong> {{ item.description }}</p>
@@ -77,8 +77,8 @@
         <div class="row">
             <div class="col-md-4" *ngFor="let item of myItems" (click)="handleDivClick(item)">
                 <div class="card">
-                    <div class="card-body bg-dark text-white">
-                        <h4 class="card-title">Item name: {{ item.item_name }}</h4>
+                    <div class="card-body transparent-bg">
+                        <div class="item-title"><h4>Item name: {{ item.item_name }}</h4></div>
                         <p>Category: {{ item.item_category }}</p>
                         <p>City: {{ item.city }}</p>
                         <p>Description: {{ item.description }}</p>

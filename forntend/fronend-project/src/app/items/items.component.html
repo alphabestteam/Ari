@@ -23,33 +23,40 @@
           
 
           <div class="upload-btn ml-auto">
-            <button type="button" class="btn btn-custom" (click)="goToUpload()">
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" (click)="goToUpload()">
                 <i class="bi bi-upload"></i> Upload Item
             </button>
         </div>
-
-        <!-- <div class="form-group">
-            <label for="itemCategory">Item Category:</label>
-            <select class="form-control" id="itemCategory" name="item_category">
-              <option value="" disabled selected>Select an item category</option>
-              <option value="Home">Home</option>
-              <option value="Office">Office</option>
-              <option value="Work Tools">Work Tools</option>
-              <option value="Else">Else</option>
-            </select>
-        </div> -->
         
+        <div class="container text-center mb-4">
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" value="Home" (click)="filter($event)">
+                <i class="bi bi-house-door"></i> Home
+            </button>
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" value="Office" (click)="filter($event)">
+                <i class="bi bi-building"></i> Office
+            </button>
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" value="Work Tools" (click)="filter($event)">
+                <i class="bi bi-tools"></i> Work Tool
+            </button>
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" value="Else" (click)="filter($event)">
+                <i class="bi bi-gear"></i> General
+            </button>
+            <button type="button" class="btn btn-custom btn-white-bg rounded-pill mx-2" value="All" (click)=fetchItems()>
+                <i class="bi bi-globe"></i> All
+            </button>
+        </div>
+               
 
         <div class="row">
-            <div class="col-md-4 mb-3" *ngFor="let item of items">   
+            <div class="ari col-md-4 mb-3" *ngFor="let item of filterItems">   
                 <div class="card">
-                    <div class="card-body bg-dark text-white" [ngClass]="{'text-bold': item === selectedChosenItem}">
+                    <div class="card-body transparent-bg">
 
                         <div [style.color]="'red'" [style.font-size]="'1.5em'">
                             <span *ngIf="item.taken"> In use! </span>
                           </div>
 
-                        <h4>Item name: {{ item.item_name }}</h4>
+                        <div class="item-title"><h4>Item name: {{ item.item_name }}</h4></div>
                         <p>Category: {{ item.item_category }}</p>
                         <p>City: {{ item.city }}</p>
                         <p>Description: {{ item.description }}</p>
@@ -63,7 +70,6 @@
                             <p><strong>Uploaded Date:</strong> {{ item.uploaded_date }}</p>                            
                         </div>
 
-                        <div class="form-check mt-3">
                             <button
                               type="button"
                               class="btn btn-custom"
@@ -75,27 +81,25 @@
                             </button>
                           </div>
                           
-
-                          <!-- <h1>file </h1>
-                          <input type="file" (change)="onFileSelected($event)">
-                          <button type="button" (click)="onUpload()">Upload</button> -->
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    
 
+
+    <hr class="my-5 bg-primary" style="height: 3px;">        
     <div class="row">
         <div class="container text-center my-4">
             <h2 class="display-4 font-weight-bold">Currently in Use</h2>
             <p class="lead">Discover the items that are actively being borrowed so you can catch them in time next time.</p>
         </div>
         <div class="row">
-            <div class="col-md-4 mb-3" *ngFor="let takenItem of takenItems">   
+            <div class="ari col-md-4 mb-3" *ngFor="let takenItem of takenItems">   
                 <div class="card">
-                    <div class="card-body bg-dark text-white" [ngClass]="{'text-bold': takenItem === selectedChosenItem}">
+                    <div class="card-body transparent-bg" [ngClass]="{'text-bold': takenItem === selectedChosenItem}" style="color: black;">
 
-                        <div class="text-center" [style.color]="'red'" [style.font-size]="'1.5em'">
+                        <div class="use text-center" [style.font-size]="'1.5em'">
                             <span *ngIf="takenItem.taken"> In use! </span>
                           </div>
 
@@ -116,6 +120,35 @@
         </div>
 
 
+        <hr class="my-5 bg-primary" style="height: 3px;">        
+        <div class="about card-body text-center">
+            <h2 class="display-4 font-weight-bold">Why LendLink?</h2>
+            <div class="about-text row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature text-center">
+                        <i class="bi bi-geo-alt h1 text-primary"></i>
+                        <p class="mt-2"><strong>Community-Driven</strong></p>
+                        <p>Connect with neighbors, share resources, and strengthen community bonds.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="feature text-center">
+                        <i class="bi bi-currency-dollar h1 text-success"></i>
+                        <p class="mt-2"><strong>Save Money</strong></p>
+                        <p>Borrow what you need instead of buying. A win-win for your wallet and the environment.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="feature text-center">
+                        <i class="bi bi-recycle h1 text-info"></i>
+                        <p class="mt-2"><strong>Reduce Waste</strong></p>
+                        <p>Embrace sustainable living by giving items a second life through sharing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>

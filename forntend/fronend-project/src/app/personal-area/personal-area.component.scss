@@ -37,3 +37,30 @@
     background-color: #0056b3; 
     transform: translateY(-5px); 
 }
+.item-title{
+    color: white;
+    margin-bottom:20px ;
+    padding-left:10px;
+    width: 100%;
+    height:35px;
+    background-color:#34495e
+    
+}
+.use {
+    color: white;
+    margin-bottom:20px ;
+    padding-left:10px;
+    width: 100%;
+    height:35px;
+    background-color: red; 
+}
+.card-body{
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.admin {
+ padding-bottom: 30px;
+ padding-top: 30px;
+
+}

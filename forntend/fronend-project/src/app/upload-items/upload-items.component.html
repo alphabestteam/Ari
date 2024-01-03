@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,21 +13,21 @@
 
 <body>
 
-  <app-navbar></app-navbar>
-
   <div class="container mt-3">
-    <h2 class="mb-4">Upload Item</h2>
+    <h2 class="mb-4 text-center">Upload Item</h2>
 
     <form #uploadForm="ngForm" enctype="multipart/form-data">
 
       <div class="form-group">
         <label for="itemName">Item Name:</label>
-        <input type="text" class="form-control" id="itemName" name="item_name" [(ngModel)]="upload.item_name" required>
+        <input type="text" class="form-control" id="itemName" name="item_name" [(ngModel)]="upload.item_name"
+          required>
       </div>
 
       <div class="form-group">
         <label for="itemCategory">Item Category:</label>
-        <select class="form-control" id="itemCategory" name="item_category" [(ngModel)]="upload.item_category" required>
+        <select class="form-control" id="itemCategory" name="item_category" [(ngModel)]="upload.item_category"
+          required>
           <option value="" disabled selected>Select an item category</option>
           <option value="Home">Home</option>
           <option value="Office">Office</option>
@@ -35,21 +36,21 @@
           <option value="Else">Else</option>
         </select>
 
-        <input *ngIf="upload.item_category === 'Else'" type="text" class="form-control" id="customCategory"
+        <input *ngIf="upload.item_category === 'Else'" type="text" class="form-control mt-2" id="customCategory"
           name="custom_category" [(ngModel)]="upload.custom_category" placeholder="Enter custom category">
       </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="itemCity">City:</label>
+          <input type="text" class="form-control" id="itemCity" name="item_city" [(ngModel)]="upload.city" required>
+        </div>
 
-
-      <div class="form-group">
-        <label for="itemCity">City:</label>
-        <input type="text" class="form-control" id="itemCity" name="item_city" [(ngModel)]="upload.city" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="text" class="form-control" id="phoneNumber" name="phonenumber" [(ngModel)]="upload.phon_number"
-          required>
+        <div class="form-group col-md-6">
+          <label for="phoneNumber">Phone Number:</label>
+          <input type="text" class="form-control" id="phoneNumber" name="phonenumber" [(ngModel)]="upload.phon_number"
+            required>
+        </div>
       </div>
 
       <div class="form-group">
@@ -58,14 +59,14 @@
           rows="3" required></textarea>
       </div>
 
-      <button (click)="onSubmit()" class="btn btn-primary" [disabled]="!uploadForm.form.valid">
-        <i class="bi bi-cloud-upload"></i> Upload
-      </button>
+      <div class="text-center">
+        <button (click)="onSubmit()" class="btn btn-primary" [disabled]="!uploadForm.form.valid">
+          <i class="bi bi-cloud-upload"></i> Upload
+        </button>
+      </div>
 
     </form>
   </div>
-
-  <app-footer></app-footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
